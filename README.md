@@ -113,7 +113,7 @@ Fields in `offices.json`:
 By default the engine uses **Ollama** running locally with `qwen2.5:3b`. It's free, works offline and no data leaves the machine. Any OpenAI-compatible API can be used instead:
 
 ```bash
-export LLM_BASE_URL=https://api.groq.com/openai/v1 LLM_MODEL=llama-3.3-70b-versatile LLM_API_KEY=<your key>
+export LLM_BASE_URL=https://api.groq.com/openai/v1 LLM_MODEL=openai/gpt-oss-120b LLM_API_KEY=<your key>
 ```
 
 Put these settings in a `.env` file (copy `.env.example`). It's gitignored, so keys never get committed.
@@ -124,8 +124,12 @@ Put these settings in a `.env` file (copy `.env.example`). It's gitignored, so k
 |---|---|---|---|
 | `qwen2.5:3b` | Ollama, local | 15/20 (75%) | ~4 s |
 | `qwen2.5:7b` | Ollama, local | 18/20 (90%) | ~12 s |
+| `qwen/qwen3.8-27b` | Groq, free tier | 19/20 (95%) | ~0.4 s |
+| **`openai/gpt-oss-120b`** | **Groq, free tier (recommended)** | **19/20 (95%)** | **~0.4 s** |
 
 Every answer was a valid service id. The misses were neighbouring services, for example general social counselling instead of homelessness help.
+
+Groq's free tier limits tokens per minute. The client waits and retries on HTTP 429, so a full test run takes a few minutes, but a single answer comes back in under a second.
 
 ## Getting started
 
