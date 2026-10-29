@@ -116,7 +116,16 @@ By default the engine uses **Ollama** running locally with `qwen2.5:3b`. It's fr
 export LLM_BASE_URL=https://api.groq.com/openai/v1 LLM_MODEL=llama-3.3-70b-versatile LLM_API_KEY=<your key>
 ```
 
-**Current accuracy** (`python -m tests.eval_routing`): **15/20 (75%)** with `qwen2.5:3b` on an M1 with 8 GB RAM, about 4 s per answer. Every answer was a valid service id. The misses were neighbouring services, for example a nursing home instead of home care.
+Put these settings in a `.env` file (copy `.env.example`). It's gitignored, so keys never get committed.
+
+**Accuracy** (`python -m tests.eval_routing`, 20 cases, M1 with 8 GB RAM):
+
+| Model | Where | Correct | Time per answer |
+|---|---|---|---|
+| `qwen2.5:3b` | Ollama, local | 15/20 (75%) | ~4 s |
+| `qwen2.5:7b` | Ollama, local | 18/20 (90%) | ~12 s |
+
+Every answer was a valid service id. The misses were neighbouring services, for example general social counselling instead of homelessness help.
 
 ## Getting started
 

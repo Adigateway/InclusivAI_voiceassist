@@ -6,6 +6,15 @@ Configure with environment variables:
   LLM_API_KEY   not needed for Ollama
 """
 import json, os, urllib.request
+from pathlib import Path
+
+# Optional .env file in the project root (gitignored) so API keys never go into the code
+_env = Path(__file__).resolve().parent.parent / ".env"
+if _env.exists():
+    for line in _env.read_text().splitlines():
+        if "=" in line and not line.lstrip().startswith("#"):
+            k, v = line.split("=", 1)
+            os.environ.setdefault(k.strip(), v.strip().strip('"'))
 
 BASE_URL = os.environ.get("LLM_BASE_URL", "http://localhost:11434/v1").rstrip("/")
 MODEL = os.environ.get("LLM_MODEL", "qwen2.5:3b")
