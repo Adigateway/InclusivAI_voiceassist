@@ -68,7 +68,6 @@ Fields in `offices.json`:
 | `offer` | What this office offers |
 | `contact_person` | Named contact. If the page names none, this is "Beratungsteam vor Ort" plus the responsible diocesan specialist |
 | `street`, `plz`, `city`, `region` | Address. `region` is the district (Landkreis) in Lower Franconia |
-| `outreach_locations` | Additional consultation hours in other towns (*Außensprechstunden*) |
 | `phone`, `email`, `website` | Contact details |
 | `is_caritas` | `false` for partner organisations |
 | `source_url` | The page the record came from |
@@ -79,7 +78,7 @@ Fields in `offices.json`:
 - **Titles:** image credits ("© stock.adobe.com") are skipped and services get clean names.
 - **Removed pages:** 16 pages that aren't services for people seeking help. These are the section overview pages, the internal child-protection prevention pages, Kita management advice, professional working groups (DiAG, AGkE) and contact lists.
 - **Diocesan coordinators** (Referent/innen) are moved out of the offices into `referents.json`.
-- **Offer:** person names and addresses are moved into `contact_person`, `street` and `outreach_locations`. The offer is always the service name plus the specific offer.
+- **Offer:** person names and addresses are moved into `contact_person` and `street`. The offer is always the service name plus the specific offer.
 - **Missing values** are filled from the most reliable real source, in this order:
   1. the same organisation's entry on another page;
   2. the website, taken from the email domain;

@@ -226,7 +226,7 @@ for o in raw_offices:
     h, m, sid = o["h"], o["m"], o["service_id"]
     service = SERVICE_NAMES.get(sid, sid)
     offer_bits = [x for x in h["offer"] if not ADDR.match(x)]
-    # "Außensprechstunde X Außensprechstunde Y Street 5" -> outreach locations + street
+    # "Außensprechstunde X Außensprechstunde Y Street 5" -> keep only the main street
     parts = re.split(r"\s*Außensprechstunde\s*", m["street"].rstrip(","))
     street, branches_in_street = parts[-1], []
     if len(parts) > 1:
@@ -238,7 +238,6 @@ for o in raw_offices:
         "organisation": h["organisation"], "offer": " – ".join([service] + [x for x in offer_bits if x.lower() != service.lower()]),
         "contact_person": "; ".join(h["person"] + (["(" + ", ".join(h["role"]) + ")"] if h["role"] else [])),
         "street": street, "plz": m["plz"], "city": m["city"].strip(), "region": region_of(m["city"].strip()),
-        "outreach_locations": ", ".join(h["branches"] + branches_in_street),
         "phone": o["phones"][0] if o["phones"] else "", "email": "; ".join(o["emails"]), "website": "; ".join(o["urls"]),
         "source_url": o["page"]["url"], "filled_fields": [],
     })
@@ -283,8 +282,6 @@ for r in offices:
         r["phone"] = CENTRAL["phone"] + " (Zentrale Caritas Diözese)"; r["filled_fields"].append("phone")
     if not r["email"]:
         r["email"] = CENTRAL["email"]; r["filled_fields"].append("email")
-    if not r["outreach_locations"]:
-        r["outreach_locations"] = "keine"
     r["is_caritas"] = bool(re.search(r"caritas", r["organisation"] + r["email"] + r["website"], re.I))
     r["filled_fields"] = ", ".join(r["filled_fields"]) or "none"
 
@@ -323,7 +320,7 @@ def sheet(name, rows, widths):
 
 
 sheet("Offices", offices, {"service": 34, "organisation": 45, "offer": 50, "contact_person": 50, "street": 28, "plz": 7,
-                           "region": 24, "outreach_locations": 40, "phone": 30, "email": 34, "website": 45,
+                           "region": 24, "phone": 30, "email": 34, "website": 45,
                            "source_url": 50, "filled_fields": 30})
 ws = sheet("Services", services, {"service_id": 30, "service": 40, "description": 90, "regions_covered": 60, "url": 50})
 for c in ws["D"][1:]: c.alignment = Alignment(wrap_text=True, vertical="top")
