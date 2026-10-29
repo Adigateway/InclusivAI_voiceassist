@@ -1,5 +1,1 @@
 openpyxl>=3.1
-streamlit>=1.39
-faster-whisper>=1.0
-av<17                # PyAV 17+ removed an argument faster-whisper 1.2 still uses
-edge-tts>=6.1

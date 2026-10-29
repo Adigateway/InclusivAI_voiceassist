@@ -28,7 +28,7 @@ Speech → STT → LLM case builder ──missing info?──▶ follow-up quest
 
 ## Languages
 
-Whisper's language detection is limited to German, English, Ukrainian, Russian, Turkish and Arabic, and biased towards German. Short German sentences were sometimes detected as English, and Whisper then translated them instead of transcribing. The detected language goes to the router and to the voice, so the answer comes back in the language the person spoke. There's also a manual language selector in the voice app.
+Speech recognition and speech output run in the browser (Web Speech API, best in Chrome), in the language picked in the header (`de-DE` or `en-GB`). That language goes to the backend, so the reply comes back in German or English. The router can also answer in other languages (Ukrainian, Turkish, Arabic, ...) for typed text.
 
 ## Repository structure
 
@@ -55,12 +55,10 @@ Whisper's language detection is limited to German, English, Ukrainian, Russian, 
 ├── tests/
 │   ├── routing_cases.json             # 20 example situations with the expected service
 │   └── eval_routing.py                # Measures routing accuracy
-├── web/
-│   └── index.html                     # Chat page (plain HTML/JS, no build step)
-├── app.py                             # Voice app (Streamlit): mic → Whisper → routing → edge-tts
 ├── docs/
 │   └── clarifying_questions.txt       # The questions + example conversations, for the presentation
-├── server.py                          # Web server + /api/chat (standard library only)
+├── frontend/                          # CaritAssist web app (React + Vite): browser speech in/out
+├── server.py                          # API for the frontend: /api/search (standard library only)
 ├── cli.py                             # Text chat in the terminal
 ├── scripts/
 │   ├── scrape.py                      # caritas-wuerzburg.de → data/raw/
@@ -154,25 +152,28 @@ python scripts/scrape.py           # re-scrape the website (optional, data is co
 python scripts/structure.py        # build data/processed/
 python scripts/export_overview.py  # build data/exports/
 ollama pull qwen2.5:3b             # free local LLM (~1.9 GB)
-python -m streamlit run app.py      # voice app at http://localhost:8501
-python server.py                   # text web chat at http://localhost:8000
+python server.py                   # API at http://127.0.0.1:8000
+cd frontend && npm install && npm run dev   # CaritAssist at http://localhost:5173 (needs Node.js)
 python cli.py                      # or: chat in the terminal
 python -m tests.eval_routing       # routing accuracy
 ```
 
 ## Web API
 
-The page talks to one endpoint, so a voice front end can reuse it:
+The CaritAssist frontend calls one endpoint:
 
 ```http
-POST /api/chat   {"session": "<any id>", "message": "Ich habe Schulden, ich wohne in Lohr"}
-→ {"kind": "ask" | "recommend" | "crisis", "text": "...", "region": "Main-Spessart",
-   "services": [{"id": "schuldnerberatung", "name": "..."}], "offices": [{"organisation": "...", "phone": "...", ...}]}
+POST /api/search  {"message": "Ich habe Schulden, ich wohne in Lohr", "language": "de", "session": "<id>"}
+→ {"kind": "ask" | "recommend" | "crisis",
+   "reply": "<text to show and read aloud>",
+   "region": "Main-Spessart",
+   "results": [{"title", "category", "description", "match_reason", "url", "offices": [...]}]}
 
-POST /api/reset  {"session": "<id>"}
+POST /api/reset   {"session": "<id>"}      # "Neues Anliegen"
+GET  /api/health                           # model and active LLM providers
 ```
 
-`text` is the complete answer, ready to be read aloud by text-to-speech.
+The backend keeps each conversation per `session`, so follow-up answers ("Kitzingen") are understood in context.
 
 ## Roadmap
 
@@ -180,7 +181,7 @@ POST /api/reset  {"session": "<id>"}
 - [x] LLM routing (service cards + JSON output + validation)
 - [x] Region and service matcher
 - [x] Web chat UI
-- [x] Voice: faster-whisper speech-to-text, edge-tts speech output (`app.py`)
+- [x] Voice: browser speech recognition and speech output in the CaritAssist frontend (Chrome recommended)
 - [x] Crisis detection and safety layer
 - [ ] Demo personas
 

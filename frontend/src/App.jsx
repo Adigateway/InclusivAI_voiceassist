@@ -24,8 +24,13 @@ const API_BASE_URL =
 const API_ENDPOINT =
   import.meta.env.VITE_API_ENDPOINT || "/api/search";
 
+// Demo mode answers without a backend; the real backend (python server.py) is used by default
 const DEMO_MODE =
-  (import.meta.env.VITE_DEMO_MODE ?? "true") === "true";
+  (import.meta.env.VITE_DEMO_MODE ?? "false") === "true";
+
+function newSessionId() {
+  return crypto.randomUUID?.() ?? String(Date.now() + Math.random());
+}
 
 const words = {
   de: {
@@ -212,6 +217,8 @@ export default function App() {
 
   const recognitionRef = useRef(null);
   const finalTextRef = useRef("");
+  // The backend keeps the conversation per session, so follow-up questions ("Where do you live?") work
+  const sessionRef = useRef(newSessionId());
   const t = words[language];
 
   useEffect(() => {
@@ -278,7 +285,8 @@ export default function App() {
         body: JSON.stringify({
           message: question,
           location: "",
-          language
+          language,
+          session: sessionRef.current
         })
       });
 
@@ -401,6 +409,16 @@ export default function App() {
     } catch {}
 
     window.speechSynthesis?.cancel();
+
+    if (!DEMO_MODE) {
+      const endpoint = `${API_BASE_URL.replace(/\/$/, "")}/api/reset`;
+      fetch(endpoint, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ session: sessionRef.current })
+      }).catch(() => {});
+    }
+    sessionRef.current = newSessionId();
     setMessages([]);
     setServices([]);
     setError("");

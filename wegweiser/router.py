@@ -74,6 +74,8 @@ class Reply:
     service_ids: list = field(default_factory=list)
     offices: list = field(default_factory=list)
     region: str = ""
+    reason: str = ""
+    lang: str = "de"
 
 
 EN_WORDS = re.compile(r"\b(i|my|me|the|and|is|need|help|can't|don't|have|live|what|please)\b", re.I)
@@ -188,7 +190,7 @@ class Assistant:
             text = EMERGENCY.get(self.lang) or texts(self.lang).get("emergency") or EMERGENCY["en"]
             # keep the crisis in the conversation, so a follow-up like "what help do I need?" is understood
             self.messages += [{"role": "user", "content": user_text}, {"role": "assistant", "content": text}]
-            return Reply("crisis", text)
+            return Reply("crisis", text, lang=self.lang)
 
         if self.pending and not self.region:       # we asked for the town; the list didn't recognise the answer
             self.region = region_from_llm(user_text)
@@ -208,7 +210,7 @@ class Assistant:
         if wants_to_ask:
             self.questions_asked += 1
             self.messages.append({"role": "assistant", "content": decision["question"]})
-            return Reply("ask", decision["question"])
+            return Reply("ask", decision["question"], lang=self.lang)
         if not ids:
             ids = [FALLBACK]
 
@@ -216,7 +218,7 @@ class Assistant:
         if not self.region and needs_region(ids):
             self.pending = decision
             self.messages.append({"role": "assistant", "content": t["region_q"]})
-            return Reply("ask", t["region_q"], service_ids=ids)
+            return Reply("ask", t["region_q"], service_ids=ids, lang=self.lang)
         return self._recommend(decision)
 
     def _recommend(self, decision):
@@ -234,4 +236,5 @@ class Assistant:
         parts.append(t["free"])
         text = "\n".join(parts)
         self.messages.append({"role": "assistant", "content": text})
-        return Reply("recommend", text, decision["service_ids"], all_offices, self.region)
+        return Reply("recommend", text, decision["service_ids"], all_offices, self.region,
+                     decision.get("reason", ""), self.lang)
