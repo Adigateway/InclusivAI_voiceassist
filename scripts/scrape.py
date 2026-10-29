@@ -34,7 +34,7 @@ for p in paths:
         print("ERR", p, e); continue
     parts = p.strip("/").split("/")
     out.append({"url": BASE + p, "section": parts[1] if len(parts) > 1 else "", "slug": parts[-1],
-                "title": content.split("\n")[0] if content else parts[-1],
+                "title": next((l.strip() for l in content.split("\n") if l.strip() and not l.startswith("©")), parts[-1]),
                 "text": content, "external_links": ext})
     print(f"{len(content):6d} chars {len(ext):3d} links  {p}")
     time.sleep(0.3)

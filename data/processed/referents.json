@@ -1,0 +1,106 @@
+[
+  {
+    "service_id": "familienpflege",
+    "section": "familie",
+    "name": "Sabrina Göpfert",
+    "role": "Referentin Jugend und Familie, stellv. Abteilungsleitung Soziale Dienste",
+    "phone": "0931 386-66720",
+    "email": "sabrina.goepfert@caritas-wuerzburg.de"
+  },
+  {
+    "service_id": "jugendhilfe",
+    "section": "familie",
+    "name": "Sabrina Göpfert",
+    "role": "Referentin Jugend und Familie, stellv. Abteilungsleitung Soziale Dienste",
+    "phone": "0931 386-66720",
+    "email": "sabrina.goepfert@caritas-wuerzburg.de"
+  },
+  {
+    "service_id": "jugend-suchtberatung",
+    "section": "jugend",
+    "name": "Peter Brückner",
+    "role": "Fachberatung Gefährdetenhilfe",
+    "phone": "0931 386-66613",
+    "email": "peter.brueckner@caritas-wuerzburg.de"
+  },
+  {
+    "service_id": "kita-fachberatung",
+    "section": "kinder",
+    "name": "Kerstin Malterre",
+    "role": "Unsere KiTa-Fachberaterinnen und KiTa-Fachberater; Referentin Katholische Kindertageseinrichtungen",
+    "phone": "0931 386-66725",
+    "email": "kerstin.malterre@caritas-wuerzburg.de"
+  },
+  {
+    "service_id": "allgemeine-sozialberatung",
+    "section": "menschen-in-krisensituationen",
+    "name": "Kilian Bundschuh",
+    "role": "Referent für Besondere Lebenslagen",
+    "phone": "0931 386 66614",
+    "email": "kilian.bundschuh@caritas-wuerzburg.de"
+  },
+  {
+    "service_id": "schuldnerberatung",
+    "section": "menschen-in-krisensituationen",
+    "name": "Peter Brückner",
+    "role": "Fachberatung Gefährdetenhilfe",
+    "phone": "0931 386-66613",
+    "email": "peter.brueckner@caritas-wuerzburg.de"
+  },
+  {
+    "service_id": "straffaelligenhilfe",
+    "section": "menschen-in-krisensituationen",
+    "name": "Peter Brückner",
+    "role": "Fachberatung Gefährdetenhilfe",
+    "phone": "0931 386-66613",
+    "email": "peter.brueckner@caritas-wuerzburg.de"
+  },
+  {
+    "service_id": "suchtberatung",
+    "section": "menschen-in-krisensituationen",
+    "name": "Peter Brückner",
+    "role": "Fachberatung Gefährdetenhilfe",
+    "phone": "0931 386-66613",
+    "email": "peter.brueckner@caritas-wuerzburg.de"
+  },
+  {
+    "service_id": "wohnsitzlosigkeit",
+    "section": "menschen-in-krisensituationen",
+    "name": "Peter Brückner",
+    "role": "Fachberatung Gefährdetenhilfe",
+    "phone": "0931 386-66613",
+    "email": "peter.brueckner@caritas-wuerzburg.de"
+  },
+  {
+    "service_id": "migrationasyl",
+    "section": "migrationasyl",
+    "name": "Patrick Sammetinger",
+    "role": "Fachberatung Migration und Integration",
+    "phone": "0931 386 66734",
+    "email": "patrick.sammetinger@caritas-wuerzburg.de"
+  },
+  {
+    "service_id": "kontakt",
+    "section": "praevention",
+    "name": "Stefanie Eisenhuth",
+    "role": "Leitung der Stabsstelle Prävention, Interventionskoordination und Aufarbeitung",
+    "phone": "0931 386-66633",
+    "email": "stefanie.eisenhuth@caritas-wuerzburg.de"
+  },
+  {
+    "service_id": "kontakt",
+    "section": "praevention",
+    "name": "Phyllis Kunad",
+    "role": "Online-Referentin",
+    "phone": "",
+    "email": "phyllis.kunad@caritas-wuerzburg.de"
+  },
+  {
+    "service_id": "diag-altenhilfe",
+    "section": "senioren",
+    "name": "Silke Birklein",
+    "role": "Referentin Gesundheit, Alter und Inklusion; Fachberaterin stationäre Altenhilfe; Geschäftsführerin der DiAG Altenhilfe",
+    "phone": "0931 386-66661",
+    "email": "silke.birklein@caritas-wuerzburg.de"
+  }
+]
