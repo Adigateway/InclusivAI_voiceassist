@@ -1,0 +1,299 @@
+[
+  {
+    "service_id": "besuchsdienste",
+    "section": "familie",
+    "service": "Besuchsdienste",
+    "description": "Viele ältere Menschen leben allein und haben - besonders wenn sie pflegebedürftig sind - nur sehr wenige soziale Kontakte. In dieser Situation können ehrenamtlich engagierte Menschen gewissermaßen „das Auge zur Welt“ sein. Sie besuchen sie, unterhalten sich mit ihnen und verbringen Zeit mit ihnen. Gelegentlich übernehmen die Ehrenamtlichen auch kleine Besorgungen.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/familie/besuchsdienste/",
+    "office_count": 1,
+    "regions_covered": "Würzburg (Stadt/Land)"
+  },
+  {
+    "service_id": "familienpflege",
+    "section": "familie",
+    "service": "Familienpflege",
+    "description": "Familienpflege ist ein Angebot für Familien, die kompetente Unterstützung in einer Krisensituation benötigen, z.B. bei akuter Erkrankung der Mutter/des Vaters, bei Kur- und Krankenhausaufenthalt, bei einer Entbindung, bei Suchterkrankungen.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/familie/familienpflege/",
+    "office_count": 1,
+    "regions_covered": "Würzburg (Stadt/Land)"
+  },
+  {
+    "service_id": "jugendhilfe",
+    "section": "familie",
+    "service": "Jugendhilfe",
+    "description": "Die Jugendsozialarbeit ist ein eigenständiger Teil der Kinder- und Jugendhilfe. Ihr Ziel ist die persönliche Entwicklung sowie die soziale Integration sozial benachteiligter und individuell beeinträchtigter junger Menschen. Die Angebote der Jugendsozialarbeit sollen für junge Menschen zu einem Wendepunkt werden, der ihnen einen neuen Zugang zu ihren Ressourcen und Entwicklungsmöglichkeiten verschafft und ihnen eine hoffnungsvolle Sicht auf die Zukunft ermöglicht. Angesichts der hohen Bedeutung von Ausbildung und Arbeit für die soziale Integration unterstützen die Angebote der Jugendsozialarbeit junge Menschen vor allem in ihrer schulischen Entwicklung, ihrer beruflichen Ausbildung und ihrer Integration in die Arbeitswelt. Hierzu haben sich im Laufe der Zeit die folgenden Handlungsfelder herausgebildet :",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/familie/jugendhilfe/",
+    "office_count": 1,
+    "regions_covered": "Würzburg (Stadt/Land)"
+  },
+  {
+    "service_id": "kuren-und-erholung",
+    "section": "familie",
+    "service": "Kuren für Mütter, Väter und pflegende Angehörige",
+    "description": "Mütter und Väter haben unter bestimmten Voraussetzungen Anspruch auf eine Kur. Die Kurberatungsstelle der Caritas berät bezüglich einer geeigneten Kureinrichtung und gibt Hilfestellung bei der Beantragung der medizinischen Vorsorgeleistung.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/familie/kuren-und-erholung/",
+    "office_count": 2,
+    "regions_covered": "Würzburg (Stadt/Land)"
+  },
+  {
+    "service_id": "nachbarschaftshilfe",
+    "section": "familie",
+    "service": "Nachbarschaftshilfe",
+    "description": "Es gibt zahlreiche Möglichkeiten für Andere da zu sein: Hausaufgaben- und Kinderbetreuung, kurzfristige Hilfe im Haushalt und bei Einkäufen, vorlesen und vieles mehr.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/familie/nachbarschaftshilfe/",
+    "office_count": 1,
+    "regions_covered": "Kitzingen"
+  },
+  {
+    "service_id": "schwangerschaftsberatung",
+    "section": "familie",
+    "service": "Schwangerschaftsberatung",
+    "description": "Eine Schwangerschaft und die Geburt eines Kindes sind eine aufregende Zeit im Leben. Wie ein roter Faden ziehen sich die verschiedenen Arbeitsgebiete der Katholischen Beratungsstelle für Schwangerschaftsfragen durch alle Lebensthemen, Fragestellungen und Interessenslagen rund um eine Schwangerschaft und die ersten Lebensjahre des Kindes.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/familie/schwangerschaftsberatung/",
+    "office_count": 3,
+    "regions_covered": "Aschaffenburg (Stadt/Land), Schweinfurt (Stadt/Land), Würzburg (Stadt/Land)"
+  },
+  {
+    "service_id": "erziehungshilfe",
+    "section": "jugend",
+    "service": "Erziehungsberatung",
+    "description": " werden sowohl Familien in Erziehungsfragen beraten, unterstützt und gefördert, als auch einzelne Kinder und Jugendliche.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/jugend/erziehungshilfe/",
+    "office_count": 7,
+    "regions_covered": "Aschaffenburg (Stadt/Land), Bad Kissingen, Haßberge, Kitzingen, Miltenberg, Rhön-Grabfeld, Würzburg (Stadt/Land)"
+  },
+  {
+    "service_id": "essstoerungen",
+    "section": "jugend",
+    "service": "Beratung bei Essstörungen",
+    "description": "Essstörungen laufen noch immer sehr lange im Verborgenen ab. Viele Betroffene versuchen, allein mit ihrem Problem fertig zu werden und stecken oft in einem Teufelskreis aus Essen, schlechtem Gewissen, Diät und Heißhungeranfällen, teilweise gefolgt von anschließendem Erbrechen.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/jugend/essstoerungen/",
+    "office_count": 1,
+    "regions_covered": "Würzburg (Stadt/Land)"
+  },
+  {
+    "service_id": "jugendsozialarbeit",
+    "section": "jugend",
+    "service": "Jugendsozialarbeit",
+    "description": "Die Angebote der Jugendsozialarbeit sollen für junge Menschen zu einem Wendepunkt werden, der ihnen einen neuen Zugang zu ihren Ressourcen und Entwicklungsmöglichkeiten verschafft und ihnen eine hoffnungsvolle Sicht auf die Zukunft ermöglicht.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/jugend/jugendsozialarbeit/",
+    "office_count": 15,
+    "regions_covered": "Aschaffenburg (Stadt/Land), Schweinfurt (Stadt/Land), Würzburg (Stadt/Land)"
+  },
+  {
+    "service_id": "jugendwohnen",
+    "section": "jugend",
+    "service": "Jugendwohnen",
+    "description": "Jugendwohnen versteht sich im Rahmen von Jugendsozialarbeit in erster Linie als Mobilitätshilfe im Kontext sprachlicher, schulischer und beruflicher Integrationsmaßnahmen sowie der regulären Berufsausbildung oder Beschäftigung junger Menschen außerhalb ihres Wohnortes. ",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/jugend/jugendwohnen/",
+    "office_count": 1,
+    "regions_covered": "Würzburg (Stadt/Land)"
+  },
+  {
+    "service_id": "junge-eltern-und-beruf",
+    "section": "jugend",
+    "service": "Junge Eltern und Berufsausbildung",
+    "description": "Ist eine Ausbildung mit Kind(ern) überhaupt möglich? Wie schaffe ich es, sowohl meinem Kind als auch den Anforderungen im Ausbildungsbetrieb gerecht zu werden? Wer betreut mein Kind während der Ausbildung? Was mache ich, wenn mein Kind krank wird? Von welchem Geld leben meine Familie und ich? Kann ich meine Ausbildung nach der Schwangerschaft und der Elternzeit in Teilzeitzeit fortführen? – Dies sind nur einige der Fragen, die sich schwangere Frauen/werdende Väter und/oder Mütter und Väter stellen, wenn sie Elternschaft und Ausbildung miteinander vereinbaren möchten.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/jugend/junge-eltern-und-beruf/",
+    "office_count": 1,
+    "regions_covered": "Würzburg (Stadt/Land)"
+  },
+  {
+    "service_id": "jugend-suchtberatung",
+    "section": "jugend",
+    "service": "Suchtberatung für Jugendliche",
+    "description": " der Caritas beraten Menschen, die Probleme mit Alkohol, Medikamenten, Drogen, Spielsucht oder Essstörungen haben. Sie beraten auf Wunsch Ehepartner, Angehörige, Freunde, Bekannte und das soziale Umfeld ihrer Klienten.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/jugend/suchtberatung/",
+    "office_count": 3,
+    "regions_covered": "Bad Kissingen, Haßberge, Würzburg (Stadt/Land)"
+  },
+  {
+    "service_id": "fruehfoerderung",
+    "section": "kinder",
+    "service": "Frühförderung",
+    "description": "Die Frühförderung ist ein offenes Beratungs- und Hilfeangebot für Eltern, wenn diese sich hinsichtlich der Entwicklung ihres Kindes Sorgen machen oder wenn eine Entwicklungsbeeinträchtigung oder Behinderung des Kindes droht bzw. vorliegt. ",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/kinder/fruehfoerderung/",
+    "office_count": 8,
+    "regions_covered": "Aschaffenburg (Stadt/Land), Haßberge, Main-Spessart, Schweinfurt (Stadt/Land), Würzburg (Stadt/Land)"
+  },
+  {
+    "service_id": "kur-und-erholung",
+    "section": "kinder",
+    "service": "Kinderkuren und Erholung",
+    "description": "Viele Kinder brauchen aus gesundheitlichen Gründen eine heilsame Auszeit. Die Caritas bietet ihnen Rehabilitations-, Kur- und Erholungsmaßnahmen an und unterstützt bei der Antragsstellung.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/kinder/kur-und-erholung/",
+    "office_count": 1,
+    "regions_covered": "Würzburg (Stadt/Land)"
+  },
+  {
+    "service_id": "allgemeine-sozialberatung",
+    "section": "menschen-in-krisensituationen",
+    "service": "Allgemeine Sozialberatung",
+    "description": " fungiert als anerkannte Fachstelle der Caritas für den Armutsbereich. Er ist unverzichtbarer Grunddienst der Caritas. Die neun Sozialberatungsdienste der Caritas in Unterfranken bieten ein niederschwelliges Beratungs- und Unterstützungsangebot in einem flächendeckenden Netzwerk.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/menschen-in-krisensituationen/allgemeine-sozialberatung/",
+    "office_count": 9,
+    "regions_covered": "Aschaffenburg (Stadt/Land), Bad Kissingen, Haßberge, Kitzingen, Main-Spessart, Miltenberg, Rhön-Grabfeld, Schweinfurt (Stadt/Land), Würzburg (Stadt/Land)"
+  },
+  {
+    "service_id": "fachambulanz-fuer-sexualstraftaeter",
+    "section": "menschen-in-krisensituationen",
+    "service": "Fachambulanz für Sexual- und Gewaltstraftäter",
+    "description": "Die Psychotherapeutische Fachambulanz für Sexual- und Gewaltstraftäter des Caritasverbandes für die Diözese Würzburg e. V. wurde für Menschen eingerichtet, die wegen eines Sexualdeliktes oder eines Gewaltdeliktes mit dem Gesetz in Konflikt geraten sind und eventuell bereits eine Auflage zur psychotherapeutischen Behandlung (Bewährungsauflage bzw. Führungsaufsicht) durch das Gericht haben. ",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/menschen-in-krisensituationen/fachambulanz-fuer-sexualstraftaeter/",
+    "office_count": 1,
+    "regions_covered": "Würzburg (Stadt/Land)"
+  },
+  {
+    "service_id": "hilfen-fuer-frauen-1",
+    "section": "menschen-in-krisensituationen",
+    "service": "Hilfen für Frauen in Not- und Gewaltsituationen",
+    "description": "Existenzielle Notlagen betreffen Frauen wie Männer. Geschlechtsspezifische Beratungs- und Unterstützungsangebote für Frauen in Notlagen, schwierigen Lebenssituationen und insbesondere bei häuslicher Gewalt sind unverzichtbar. Diese Angebote werden in Unterfranken insbesondere vom Sozialdienst katholischer Frauen e. V. in Würzburg, Schweinfurt und Aschaffenburg, von InVia e. V. in Würzburg und Aschaffenburg und von den Oberzeller Franziskanerinnen in Würzburg vorgehalten. ",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/menschen-in-krisensituationen/hilfen-fuer-frauen-1/",
+    "office_count": 5,
+    "regions_covered": "Aschaffenburg (Stadt/Land), Schweinfurt (Stadt/Land), Würzburg (Stadt/Land)"
+  },
+  {
+    "service_id": "hivaids",
+    "section": "menschen-in-krisensituationen",
+    "service": "HIV/Aids-Beratung",
+    "description": "Mit der Diagnose 'HIV positiv' scheint erst einmal die Welt zusammenzubrechen. Viele beklemmende Fragen stürzen auf sie ein, nichts ist mehr wie vorher. Wie kann ich damit leben? Was wird meine Familie, mein Freundeskreis dazu sagen? Wem kann ich es überhaupt erzählen? Worauf muss ich jetzt achten? Kann ich meinen Beruf noch weiter ausüben? Und viele Fragen mehr ...",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/menschen-in-krisensituationen/hivaids/",
+    "office_count": 1,
+    "regions_covered": "Würzburg (Stadt/Land)"
+  },
+  {
+    "service_id": "krisenhilfe-telefonseelsorge-und-suizidpraevention",
+    "section": "menschen-in-krisensituationen",
+    "service": "Krisenhilfe, Telefonseelsorge und Suizidprävention",
+    "description": "Krisen gehören zum Leben dazu und können jederzeit eintreten. Eine Trennung, der Tod eines Angehörigen, der Verlust des Arbeitsplatzes oder eine schwere Krankheit ",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/menschen-in-krisensituationen/krisenhilfe-telefonseelsorge-und-suizidpraevention/",
+    "office_count": 1,
+    "regions_covered": "Würzburg (Stadt/Land)"
+  },
+  {
+    "service_id": "schuldnerberatung",
+    "section": "menschen-in-krisensituationen",
+    "service": "Schuldner- und Insolvenzberatung",
+    "description": "Die Schuldnerberatungsstellen der Caritas, ihrer Fachverbände und ihrer Kooperationspartner helfen, wenn finanzielle Sorgen und Probleme ausweglos erscheinen und unterstützen Rat- und Hilfesuchende dabei, existenznotwendige Sozialleistungen zu beantragen oder zu sichern. Die Schuldner- und Insolvenzberatung ist eine originäre Kernaufgabe von Kirche. Sie begleitet und berät überschuldete Menschen.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/menschen-in-krisensituationen/schuldnerberatung/",
+    "office_count": 10,
+    "regions_covered": "Aschaffenburg (Stadt/Land), Bad Kissingen, Haßberge, Kitzingen, Main-Spessart, Miltenberg, Rhön-Grabfeld, Schweinfurt (Stadt/Land), Würzburg (Stadt/Land)"
+  },
+  {
+    "service_id": "sozialpsychiatrische-dienste",
+    "section": "menschen-in-krisensituationen",
+    "service": "Sozialpsychiatrische Dienste",
+    "description": "Die Sozialpsychiatrischen Dienste der Caritas sind ein wesentlicher Bestandteil unseres Engagements für Menschen mit psychischen Erkrankungen und ihren Angehörigen. Als Spitzenverband setzen wir uns dafür ein, dass Betroffene Zugang zu niedrigschwelligen und ganzheitlichen, ambulanten Hilfsangeboten erhalten, die sie in schwierigen Lebenssituationen unterstützen und ihnen eine Teilhabe am gesellschaftlichen Leben ermöglichen.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/menschen-in-krisensituationen/sozialpsychiatrische-dienste/",
+    "office_count": 5,
+    "regions_covered": "Haßberge, Main-Spessart, Schweinfurt (Stadt/Land), Würzburg (Stadt/Land)"
+  },
+  {
+    "service_id": "straffaelligenhilfe",
+    "section": "menschen-in-krisensituationen",
+    "service": "Straffälligenhilfe",
+    "description": "Die Caritas in Unterfranken und ihre Fachverbände halten viele Angebote für straffälige und haftentlassene Menschen und ihre Angehörigen bereit. Ziel der Einrichtungen und Dienste ist es, Menschen zu stärken und sie zu ermutigen, ihre Lebenssituation zu verbessern. Die Hilfe ist kostenlos, professionell und richtet sich sowohl an straffällig gewordene Menschen als auch an deren Angehörige. ",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/menschen-in-krisensituationen/straffaelligenhilfe/",
+    "office_count": 1,
+    "regions_covered": "Würzburg (Stadt/Land)"
+  },
+  {
+    "service_id": "suchtberatung",
+    "section": "menschen-in-krisensituationen",
+    "service": "Suchtberatung",
+    "description": " der Caritas beraten Menschen, die Probleme mit Alkohol, Medikamenten, Drogen, Spielsucht oder Essstörungen haben. Sie beraten auf Wunsch Ehepartner, Angehörige, Freunde, Bekannte und das soziale Umfeld ihrer Klienten.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/menschen-in-krisensituationen/suchtberatung/",
+    "office_count": 12,
+    "regions_covered": "Aschaffenburg (Stadt/Land), Bad Kissingen, Haßberge, Kitzingen, Main-Spessart, Miltenberg, Rhön-Grabfeld, Schweinfurt (Stadt/Land), Würzburg (Stadt/Land)"
+  },
+  {
+    "service_id": "wohnsitzlosigkeit",
+    "section": "menschen-in-krisensituationen",
+    "service": "Wohnungslosenhilfe",
+    "description": "Obdach- und Wohnungslosigkeit dürfen keine Endstation sein. Der Weg hinaus ist nicht immer einfach, aber Menschen, die das betrifft, müssen ihn nicht allein gehen. Die Kirche und ihre Caritas sowie andere Wohlfahrtsverbände halten in Unterfranken ein Netz von Einrichtungen und Diensten der Wohnungsnotfallhilfe bereit. Diese setzen sich ein für die Belange von obdach- und wohnungslosen Menschen oder auch von Menschen, die Gefahr laufen, ihre Wohnung zu verlieren und bieten differenzierte Hilfen an.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/menschen-in-krisensituationen/wohnsitzlosigkeit/",
+    "office_count": 4,
+    "regions_covered": "Aschaffenburg (Stadt/Land), Miltenberg, Schweinfurt (Stadt/Land), Würzburg (Stadt/Land)"
+  },
+  {
+    "service_id": "foerderschulen",
+    "section": "menschen-mit-behinderung",
+    "service": "Förderschulen",
+    "description": "Förderschulen",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/menschen-mit-behinderung/foerderschulen/",
+    "office_count": 1,
+    "regions_covered": "Würzburg (Stadt/Land)"
+  },
+  {
+    "service_id": "adressen-migrationsdienste",
+    "section": "migrationasyl",
+    "service": "Flüchtlings- und Integrationsberatung",
+    "description": "Flüchtlings- und Integrationsberatung",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/migrationasyl/adressen-migrationsdienste/",
+    "office_count": 10,
+    "regions_covered": "Aschaffenburg (Stadt/Land), Bad Kissingen, Haßberge, Kitzingen, Main-Spessart, Miltenberg, Rhön-Grabfeld, Schweinfurt (Stadt/Land), Würzburg (Stadt/Land)"
+  },
+  {
+    "service_id": "beratung-in-wuerzburg",
+    "section": "migrationasyl",
+    "service": "Flüchtlings- und Integrationsberatung Würzburg",
+    "description": "Viele Menschen flüchten nach Deutschland, weil sie vor Gewalt, Terror, Verfolgung und Krieg ihre Heimat verlassen. Sie suchen Zuflucht und eine neue Lebensperspektive. Geflüchtete Menschen haben viele Fragen und Nöte. Ihnen stehen die Türen der Flüchtlings- und Integrationsberatung offen.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/migrationasyl/beratung-in-wuerzburg/",
+    "office_count": 4,
+    "regions_covered": "Würzburg (Stadt/Land)"
+  },
+  {
+    "service_id": "rueckkehrberatung",
+    "section": "migrationasyl",
+    "service": "Rückkehrberatung für Geflüchtete",
+    "description": "Einem Großteil der Flüchtlinge wird in Deutschland kein dauerhaftes Bleiberecht gewährt. Allein in Bayern leben circa 12.000 Flüchtlinge mit Duldungen. Viele wären bereit, in ihr Heimatland zurückzukehren, wenn ihnen Perspektiven für die Rückkehr gegeben würden. Die zentrale Rückkehrberatung gibt gezielte Informationen über die aktuelle Situation im Heimatland und unterstützt konkret bei der Entscheidungsfindung. Eine selbstbestimmte, selbst gestaltete und freiwillige Rückkehr in Sicherheit und Würde ist einer ausländerrechtlichen Maßnahme, insbesondere einer Abschiebung und Abschiebehaft, vorzuziehen.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/migrationasyl/rueckkehrberatung/",
+    "office_count": 1,
+    "regions_covered": "Würzburg (Stadt/Land)"
+  },
+  {
+    "service_id": "ambulante-pflege",
+    "section": "senioren",
+    "service": "Ambulante Pflege",
+    "description": "Die meisten Menschen wollen auch bei Hilfs- und Pflegebedürftigkeit weiterhin in der häuslichen Umgebung bleiben. Durch qualifizierte und passgenaue Angebote wollen unsere Caritas-Sozialstationen dazu beitragen, dass der Wunsch der meisten Menschen nicht nur Wunsch bleibt, sondern Wirklichkeit wird. Unser Netzwerk aus über 40 Caritas-Sozialstationen ist rund um die Uhr für Sie da, wenn Sie in Ihren eigenen vier Wänden Pflege, Beratung oder auch Unterstützung im Haushalt benötigen. Sie vermitteln u.a. Essen auf Rädern, Hausnotrufsysteme und bieten für demenzkranke Menschen verschiedene Formen der Betreuung zu Hause oder in einer Gruppe an.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/senioren/altenhilfe/ambulante-pflege/",
+    "office_count": 1,
+    "regions_covered": "Würzburg (Stadt/Land)"
+  },
+  {
+    "service_id": "ambulante-wohngemeinschaften",
+    "section": "senioren",
+    "service": "Ambulant betreute Wohngemeinschaften",
+    "description": "Ambulante Wohngemeinschaften sind neue Formen für die Betreuung pflegebedürftiger, meist an Demenz erkrankten Menschen. Ziel der ambulanten Wohngemeinschaften ist es, hilfsbedürftigen Menschen ein weitgehend selbstbestimmtes und würdevolles Altwerden zu ermöglichen. Demenzkranke Menschen erfahren hier neue Lebensqualität und Angehörige werden spürbar entlastet.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/senioren/altenhilfe/ambulante-wohngemeinschaften/",
+    "office_count": 1,
+    "regions_covered": "Würzburg (Stadt/Land)"
+  },
+  {
+    "service_id": "palliativ-ethik-und-hospizarbeit",
+    "section": "senioren",
+    "service": "Hospiz- und Palliativbegleitung",
+    "description": "Der Teilbereich Hospiz, Palliativ und Ethik begleitet Projekte zu ethischen Fragestellungen, bietet Fachtage an und vermittelt Handlungsweisen in der Begleitung schwerstkranker und sterbender Menschen. Unter Berücksichtigung der Bedarfe von Einrichtungen und den Bedürfnissen, der dort lebenden Menschen werden Unterstützungsangebote weiterentwickelt und Vernetzungen mit den dazugehörigen Akteuren realisiert. Gemeinsam mit dem Teilbereich Inklusion und Teilhabe werden Menschen mit Behinderungen sowie Menschen mit psychischen Erkrankungen unterstützt.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/senioren/altenhilfe/palliativ-ethik-und-hospizarbeit/",
+    "office_count": 1,
+    "regions_covered": "Würzburg (Stadt/Land)"
+  },
+  {
+    "service_id": "teilstationaere-altenhilfe",
+    "section": "senioren",
+    "service": "Tagespflege",
+    "description": "Für den Besuch einer Tagespflege ist kein Pflegegrad notwendig, es reicht aus, wenn Sie Lust auf Aktivitäten und Gemeinschaft mit anderen Menschen haben.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/senioren/altenhilfe/teilstationaere-altenhilfe/",
+    "office_count": 1,
+    "regions_covered": "Würzburg (Stadt/Land)"
+  },
+  {
+    "service_id": "vollstationaere-pflege",
+    "section": "senioren",
+    "service": "Pflegeheim (vollstationäre Pflege)",
+    "description": "Es gibt Situationen, in denen die Pflege zu Hause nicht mehr sichergestellt werden kann. Wenn Angehörige weit weg wohnen, wenn die die Betreuung und die Pflege körperlich und/oder psychisch zu anspruchsvoll wird, wenn pflegende Angehörige nicht mehr die nötige Kraft verspüren, sind hierfür beispielhafte Situationen. Für Angehörige ist es häufig nicht leicht, diesen Schritt zu gehen. Sie haben das Gefühl, ein Familienmitglied 'abzuschieben' oder sorgen sich, dass es von der pflegebedürftigen Person so verstanden werden könnte.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/senioren/altenhilfe/vollstationaere-pflege/",
+    "office_count": 1,
+    "regions_covered": "Würzburg (Stadt/Land)"
+  }
+]
