@@ -1,0 +1,22 @@
+[
+  {"text": "Ich kann meine Rechnungen nicht mehr bezahlen und habe einen Brief vom Gerichtsvollzieher bekommen", "expect": ["schuldnerberatung"]},
+  {"text": "My bank account got frozen and I owe money to three companies", "expect": ["schuldnerberatung"]},
+  {"text": "Mein Mann trinkt jeden Abend eine Flasche Wein und wird dann laut", "expect": ["suchtberatung"]},
+  {"text": "Mein Sohn ist 16 und kifft jeden Tag", "expect": ["jugend-suchtberatung"]},
+  {"text": "Ich bin schwanger und weiß nicht, wie ich das finanziell schaffen soll", "expect": ["schwangerschaftsberatung"]},
+  {"text": "Unsere Tochter geht seit Wochen nicht mehr zur Schule und wir streiten nur noch", "expect": ["erziehungshilfe"]},
+  {"text": "Mein Kind ist drei und spricht noch fast gar nicht", "expect": ["fruehfoerderung"]},
+  {"text": "I came from Ukraine and got a letter from the Ausländerbehörde I don't understand", "expect": ["fluechtlingsberatung"]},
+  {"text": "Ich habe heute Nacht keinen Platz zum Schlafen", "expect": ["wohnsitzlosigkeit"]},
+  {"text": "Meine Mutter kann sich nicht mehr selbst waschen und braucht Pflege zu Hause", "expect": ["ambulante-pflege"]},
+  {"text": "Ich bin als Mutter von drei Kindern total erschöpft und brauche eine Auszeit", "expect": ["kuren-und-erholung"]},
+  {"text": "Seit Monaten bin ich nur noch traurig und komme morgens nicht aus dem Bett", "expect": ["sozialpsychiatrische-dienste", "krisenhilfe-telefonseelsorge"]},
+  {"text": "Ich brauche Hilfe beim Antrag auf Wohngeld", "expect": ["allgemeine-sozialberatung"]},
+  {"text": "Meine Tochter isst kaum noch was und ist total dünn geworden", "expect": ["essstoerungen"]},
+  {"text": "Ich bin gerade aus dem Gefängnis entlassen worden und habe nichts", "expect": ["straffaelligenhilfe"]},
+  {"text": "Meine Oma ist sehr einsam, niemand besucht sie", "expect": ["besuchsdienste"]},
+  {"text": "Mein Vater hat Demenz, gibt es etwas anderes als ein Pflegeheim?", "expect": ["ambulante-wohngemeinschaften", "teilstationaere-altenhilfe"]},
+  {"text": "Mein Mann stirbt bald an Krebs und ich weiß nicht, wie ich das schaffen soll", "expect": ["palliativ-ethik-und-hospizarbeit"]},
+  {"text": "Mein Asylantrag wurde abgelehnt und ich überlege, in meine Heimat zurückzugehen", "expect": ["rueckkehrberatung"]},
+  {"text": "Ich bin 19, habe die Schule abgebrochen und finde keine Ausbildung", "expect": ["jugendsozialarbeit"]}
+]

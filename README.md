@@ -41,6 +41,16 @@ Speech → STT → LLM case builder ──missing info?──▶ follow-up quest
 │   └── exports/
 │       ├── services_overview.xlsx     # Readable dump of raw pages + all contact links
 │       └── services_pages.csv
+├── data/routing/
+│   └── service_cards.json             # Plain-language service cards the LLM routes with (32 cards)
+├── app/
+│   ├── llm.py                         # Client for any OpenAI-compatible API (Ollama, Groq, ...)
+│   ├── router.py                      # Routing engine: LLM picks service, code picks office
+│   └── safety.py                      # Crisis detection, runs before the LLM
+├── tests/
+│   ├── routing_cases.json             # 20 example situations with the expected service
+│   └── eval_routing.py                # Measures routing accuracy
+├── cli.py                             # Text chat with the assistant
 ├── scripts/
 │   ├── scrape.py                      # caritas-wuerzburg.de → data/raw/
 │   ├── structure.py                   # raw pages → cleaned services, offices, referents
@@ -90,6 +100,24 @@ Fields in `offices.json`:
 
 **Known limitations:** parsing is heuristic, so check any record against its `source_url`. Partner-link rows have no street address ("siehe Website des Trägers").
 
+## How routing works
+
+1. **Crisis check** (`app/safety.py`): keyword rules in several languages run on every message *before* the LLM. On a match, the assistant gives the emergency numbers straight away.
+2. **The LLM picks the service type.** Every request includes all service cards from `data/routing/service_cards.json` in the prompt. The model answers in JSON with `action` (`ask`/`recommend`), `service_ids`, `question`, `reason` and `language`. Nothing is trained or fine-tuned.
+3. **Code validates the answer.** Any service id that isn't in the catalogue is dropped. If nothing valid remains, the assistant falls back to general social counselling (Allgemeine Sozialberatung).
+4. **Code finds the region** from the town the user names (for example "Lohr" → Main-Spessart). If no town is known, it asks once.
+5. **Code looks up the offices** in `offices.json`, in this order: an office in the user's region → a related service in the region → the central office serving all of Lower Franconia → local general social counselling. The LLM never produces contact details.
+
+### LLM (free)
+
+By default the engine uses **Ollama** running locally with `qwen2.5:3b`. It's free, works offline and no data leaves the machine. Any OpenAI-compatible API can be used instead:
+
+```bash
+export LLM_BASE_URL=https://api.groq.com/openai/v1 LLM_MODEL=llama-3.3-70b-versatile LLM_API_KEY=<your key>
+```
+
+**Current accuracy** (`python -m tests.eval_routing`): **15/20 (75%)** with `qwen2.5:3b` on an M1 with 8 GB RAM, about 4 s per answer. Every answer was a valid service id. The misses were neighbouring services, for example a nursing home instead of home care.
+
 ## Getting started
 
 ```bash
@@ -98,15 +126,18 @@ pip install -r requirements.txt
 python scripts/scrape.py           # re-scrape the website (optional, data is committed)
 python scripts/structure.py        # build data/processed/
 python scripts/export_overview.py  # build data/exports/
+ollama pull qwen2.5:3b             # free local LLM (~1.9 GB)
+python cli.py                      # chat with the assistant
+python -m tests.eval_routing       # routing accuracy
 ```
 
 ## Roadmap
 
 - [x] Scrape and structure the Caritas service directory
-- [ ] LLM case builder (structured extraction from speech)
-- [ ] Region and service matcher
+- [x] LLM routing (service cards + JSON output + validation)
+- [x] Region and service matcher
 - [ ] Voice UI (speech-to-text and text-to-speech, multilingual)
-- [ ] Crisis detection and safety layer
+- [x] Crisis detection and safety layer
 - [ ] Demo personas
 
 ## Disclaimer
