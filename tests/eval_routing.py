@@ -1,8 +1,8 @@
 """Exam for the router: how often does the LLM pick the expected service?   python -m tests.eval_routing"""
 import json, time
 from pathlib import Path
-from app import llm
-from app.router import Assistant
+from wegweiser import llm
+from wegweiser.router import Assistant
 
 cases = json.load(open(Path(__file__).parent / "routing_cases.json", encoding="utf8"))
 hits, start = 0, time.time()

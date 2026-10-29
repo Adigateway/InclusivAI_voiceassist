@@ -43,7 +43,7 @@ Speech → STT → LLM case builder ──missing info?──▶ follow-up quest
 │       └── services_pages.csv
 ├── data/routing/
 │   └── service_cards.json             # Plain-language service cards the LLM routes with (32 cards)
-├── app/
+├── wegweiser/                         # Routing engine (Python package)
 │   ├── llm.py                         # Client for any OpenAI-compatible API (Ollama, Groq, ...)
 │   ├── router.py                      # Routing engine: LLM picks service, code picks office
 │   └── safety.py                      # Crisis detection, runs before the LLM
@@ -52,6 +52,7 @@ Speech → STT → LLM case builder ──missing info?──▶ follow-up quest
 │   └── eval_routing.py                # Measures routing accuracy
 ├── web/
 │   └── index.html                     # Chat page (plain HTML/JS, no build step)
+├── app.py                             # Voice app (Streamlit): mic → Whisper → routing → edge-tts
 ├── server.py                          # Web server + /api/chat (standard library only)
 ├── cli.py                             # Text chat in the terminal
 ├── scripts/
@@ -105,7 +106,7 @@ Fields in `offices.json`:
 
 ## How routing works
 
-1. **Crisis check** (`app/safety.py`): keyword rules in several languages run on every message *before* the LLM. On a match, the assistant gives the emergency numbers straight away.
+1. **Crisis check** (`wegweiser/safety.py`): keyword rules in several languages run on every message *before* the LLM. On a match, the assistant gives the emergency numbers straight away.
 2. **The LLM picks the service type.** Every request includes all service cards from `data/routing/service_cards.json` in the prompt. The model answers in JSON with `action` (`ask`/`recommend`), `service_ids`, `question`, `reason` and `language`. Nothing is trained or fine-tuned.
 3. **Code validates the answer.** Any service id that isn't in the catalogue is dropped. If nothing valid remains, the assistant falls back to general social counselling (Allgemeine Sozialberatung).
 4. **Code finds the region** from the town the user names (for example "Lohr" → Main-Spessart). If no town is known, it asks once.
@@ -143,7 +144,8 @@ python scripts/scrape.py           # re-scrape the website (optional, data is co
 python scripts/structure.py        # build data/processed/
 python scripts/export_overview.py  # build data/exports/
 ollama pull qwen2.5:3b             # free local LLM (~1.9 GB)
-python server.py                   # web chat at http://localhost:8000
+python -m streamlit run app.py      # voice app at http://localhost:8501
+python server.py                   # text web chat at http://localhost:8000
 python cli.py                      # or: chat in the terminal
 python -m tests.eval_routing       # routing accuracy
 ```
@@ -168,7 +170,7 @@ POST /api/reset  {"session": "<id>"}
 - [x] LLM routing (service cards + JSON output + validation)
 - [x] Region and service matcher
 - [x] Web chat UI
-- [ ] Voice (speech-to-text and text-to-speech, multilingual)
+- [x] Voice: faster-whisper speech-to-text, edge-tts speech output (`app.py`)
 - [x] Crisis detection and safety layer
 - [ ] Demo personas
 

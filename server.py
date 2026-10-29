@@ -8,8 +8,8 @@ import json, os
 from http.server import ThreadingHTTPServer, BaseHTTPRequestHandler
 from pathlib import Path
 
-from app.router import Assistant, CARD
-from app import llm
+from wegweiser.router import Assistant, CARD
+from wegweiser import llm
 
 WEB = Path(__file__).resolve().parent / "web"
 PORT = int(os.environ.get("PORT", 8000))

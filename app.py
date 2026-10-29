@@ -1,19 +1,16 @@
 
 import os
+import re
 import tempfile
 import asyncio
 import edge_tts
 
 import streamlit as st
 from faster_whisper import WhisperModel
-from sentence_transformers import SentenceTransformer
 
-from scripts.rag_assistant import (
-    load_services,
-    create_service_text,
-    retrieve_services,
-    generate_answer,
-)
+from wegweiser.router import Assistant
+
+
 async def generate_speech(text, language):
     if language == "de":
         voice = "de-DE-KatjaNeural"
@@ -35,7 +32,18 @@ async def generate_speech(text, language):
     finally:
         if os.path.exists(audio_path):
             os.remove(audio_path)
-            
+
+
+def speakable(reply):
+    """What to read aloud: the answer without e-mails and web addresses, which sound terrible in TTS."""
+    if reply.kind != "recommend":
+        return reply.text
+    lines = [line for line in reply.text.split("\n") if not line.startswith(("•", "  "))]
+    for office in reply.offices[:1]:
+        lines.append(f"{office['organisation']}, {office['city']}. Telefon {office['phone']}.")
+    return re.sub(r"https?://\S+", "", "\n".join(lines))
+
+
 st.set_page_config(
     page_title="Caritas Voice Assistant",
     page_icon="🎙️",
@@ -44,40 +52,38 @@ st.set_page_config(
 st.title("🎙️ Caritas AI Voice Assistant")
 st.write("Speak in German or English to find Caritas services.")
 
+
 @st.cache_resource
-def load_models_and_data():
-    services = load_services()
-
-    embedding_model = SentenceTransformer(
-        "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
-    )
-
-    service_texts = [create_service_text(s) for s in services]
-
-    embeddings = embedding_model.encode(
-        service_texts,
-        convert_to_tensor=True,
-        normalize_embeddings=True,
-    )
-
-    whisper_model = WhisperModel(
+def load_whisper():
+    return WhisperModel(
         "small",
         device="cpu",
         compute_type="int8",
     )
 
-    return services, embedding_model, embeddings, whisper_model
-
 
 try:
     with st.spinner("Loading AI models..."):
-        services, embedding_model, embeddings, whisper_model = (
-            load_models_and_data()
-        )
+        whisper_model = load_whisper()
 except Exception as error:
     st.error(f"Could not load the AI models: {error}")
     st.stop()
 
+# One routing engine per browser session, so follow-up questions ("Where do you live?") keep their context
+if "assistant" not in st.session_state:
+    st.session_state.assistant = Assistant()
+    st.session_state.history = []
+
+for role, text, offices in st.session_state.history:
+    with st.chat_message(role):
+        st.write(text)
+        for office in offices:
+            st.markdown(
+                f"**{office['organisation']}**  \n"
+                f"{office['street']}, {office['plz']} {office['city']}  \n"
+                f"Tel. {office['phone']} · {office['email']}  \n"
+                f"[Website]({office['website'].split(';')[0].strip()})"
+            )
 
 st.subheader("Ask your question")
 
@@ -111,45 +117,20 @@ if audio is not None:
                 st.warning("I couldn't recognize your speech. Please try again.")
                 st.stop()
 
-            st.subheader("You said")
-            st.write(transcript)
-            st.caption(f"Detected language: {info.language}")
+            with st.spinner("Finding the right Caritas service..."):
+                reply = st.session_state.assistant.handle(transcript)
 
-            with st.spinner("Searching Caritas services..."):
-                results = retrieve_services(
-                    transcript,
-                    services,
-                    embedding_model,
-                    embeddings,
-                )
-
-            with st.spinner("Preparing your answer..."):
-                answer = generate_answer(transcript, results)
-
-            st.subheader("Caritas answer")
-            st.write(answer)
+            st.session_state.history.append(("user", transcript, []))
+            text = reply.text
+            if reply.kind == "recommend":       # offices are shown as cards below the text
+                text = "\n".join(l for l in reply.text.split("\n") if not l.startswith(("•", "  ")))
+            st.session_state.history.append(("assistant", text, reply.offices))
 
             with st.spinner("Speaking the answer..."):
-                audio_bytes = asyncio.run(
-                    generate_speech(answer, info.language)
+                st.session_state.audio_reply = asyncio.run(
+                    generate_speech(speakable(reply), info.language)
                 )
-
-            st.audio(
-                audio_bytes,
-                format="audio/mp3",
-                autoplay=True,
-            )
-
-            if results:
-                st.subheader("Sources")
-                for score, service in results:
-                    title = service.get("title_de", "Caritas service")
-                    url = service.get("url")
-
-                    if url:
-                        st.markdown(f"- [{title}]({url})")
-                    else:
-                        st.write(f"- {title}")
+            st.rerun()
 
         except Exception as error:
             st.error(f"Something went wrong: {error}")
@@ -158,5 +139,17 @@ if audio is not None:
             if temporary_path and os.path.exists(temporary_path):
                 os.remove(temporary_path)
 
+if "audio_reply" in st.session_state:
+    st.audio(
+        st.session_state.pop("audio_reply"),
+        format="audio/mp3",
+        autoplay=True,
+    )
+
+if st.button("New conversation"):
+    for key in ("assistant", "history"):
+        st.session_state.pop(key, None)
+    st.rerun()
+
 st.divider()
-st.caption("Responses are based on the available Caritas service dataset.")
+st.caption("Prototype, not an official Caritas service. In an emergency call 112 · TelefonSeelsorge 0800 111 0 111")

@@ -1,6 +1,6 @@
 """Text chat with the routing engine (voice comes later):  python cli.py"""
-from app.router import Assistant
-from app import llm
+from wegweiser.router import Assistant
+from wegweiser import llm
 
 print(f"Caritas Wegweiser  [model: {llm.MODEL} @ {llm.BASE_URL}]  (Ctrl+C to quit)\n")
 bot = Assistant()
