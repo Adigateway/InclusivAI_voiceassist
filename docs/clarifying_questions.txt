@@ -1,0 +1,130 @@
+CARITAS WEGWEISER – FOLLOW-UP QUESTIONS
+=======================================
+
+The idea in one sentence
+------------------------
+The assistant asks as FEW questions as possible: only when it really cannot tell
+which service fits, and never more than 2 questions per conversation (plus the
+town, if it is needed and not mentioned yet).
+
+Principles
+----------
+1. Clear request -> no question at all.
+   "Mein Mann trinkt jeden Abend, wir wohnen in Lohr" -> addiction counselling in Lohr, immediately.
+2. Unclear request -> one short, friendly question, in the person's own language.
+3. Never ask something the person already said.
+4. Maximum 2 questions. After that the assistant recommends the best match;
+   general social counselling (Allgemeine Sozialberatung) is the safe fallback,
+   because it refers people on.
+5. The town is asked only if the service is local. Services with one office
+   for all of Lower Franconia (e.g. crisis line, home care contact) need no town.
+6. Never ask for names or other personal details.
+7. Crisis words (suicide, violence) -> emergency numbers first, no questions.
+   The conversation continues afterwards with that context.
+
+
+THE QUESTIONS
+=============
+(based on the "Clarifying Questions" sheet of CARITAS_DATASET.xlsx, Q001–Q008,
+plus three of our own: Q013–Q015)
+
+Q002  What is the problem about?
+      When: the request is broad ("I need help", "everything is too much")
+      DE: Erzählen Sie mir gern ein bisschen mehr: Worum geht es gerade vor allem –
+          zum Beispiel Geld, Familie, Gesundheit, Wohnung oder etwas anderes?
+      EN: Could you tell me a bit more: what is it mainly about right now –
+          for example money, family, health, housing or something else?
+
+Q003  For whom?
+      When: unclear if the help is for the person or for someone else
+      DE: Suchen Sie Unterstützung für sich selbst oder für jemand anderen,
+          zum Beispiel Ihr Kind, Ihren Partner oder Ihre Eltern?
+      EN: Are you looking for support for yourself or for someone else,
+          for example your child, partner or parents?
+
+Q013  How old?
+      When: the right service depends on age (small child / teenager / adult / older person)
+      DE: Wie alt ist die Person ungefähr, um die es geht?
+      EN: Roughly how old is the person this is about?
+
+Q014  Debts or benefits?
+      When: money problems – debt counselling or general social counselling?
+      DE: Geht es eher um Schulden und offene Rechnungen, oder um Anträge auf
+          Unterstützung wie Bürgergeld oder Wohngeld?
+      EN: Is it more about debts and unpaid bills, or about applying for support
+          like Bürgergeld or Wohngeld?
+
+Q004  Housing: tonight or soon?
+      When: housing problems – homeless now, or at risk of losing the flat?
+      DE: Haben Sie heute Nacht einen sicheren Schlafplatz, oder geht es darum,
+          dass Sie Ihre Wohnung verlieren könnten?
+      EN: Do you have a safe place to sleep tonight, or is it about possibly
+          losing your flat?
+
+Q007  Talk now or ongoing support?
+      When: emotional / mental health problems
+      DE: Möchten Sie jetzt sofort mit jemandem sprechen, oder suchen Sie eher
+          längerfristige Begleitung?
+      EN: Would you like to talk to someone right now, or are you looking for
+          longer-term support?
+
+Q015  Care at home or in a home?
+      When: care for an older or ill person
+      DE: Soll die Person weiter zu Hause leben können, oder geht es um einen
+          Platz in einer Einrichtung?
+      EN: Should the person be able to keep living at home, or is it about a
+          place in a care home?
+
+Q008  Immediate danger?
+      When: only if there are unclear signs of danger. Never delays emergency numbers.
+      DE: Sind Sie oder jemand anderes gerade in unmittelbarer Gefahr?
+      EN: Are you or someone else in immediate danger right now?
+
+Q001  Where do you live?   (asked by the system, not the AI)
+      When: a local office is needed and no town was mentioned
+      DE: Damit ich Ihnen die richtige Stelle in Ihrer Nähe nennen kann:
+          In welcher Stadt oder welchem Landkreis wohnen Sie?
+      EN: So I can find the right office near you: which town or district
+          do you live in?
+      Understands town names, villages and other alphabets ("Швайнфурт" -> Schweinfurt).
+
+Not used for routing (from the spreadsheet): Q005 work, Q006 guardianship
+(no matching services in the Caritas directory yet), Q009 language (detected
+automatically from speech), Q010–Q012 (accessibility / contact preferences,
+good ideas for a later version).
+
+
+EXAMPLE CONVERSATIONS (real output of the prototype)
+====================================================
+
+1) Unclear request – 2 questions, then a match
+   User: Ich brauche Hilfe.
+   Bot:  Könnten Sie mir bitte etwas mehr sagen: worum es Ihnen gerade hauptsächlich
+         geht – zum Beispiel Geld, Familie, Gesundheit, Wohnung oder etwas anderes?   (Q002)
+   User: Es geht ums Geld.
+   Bot:  Geht es eher um Schulden und unbezahlte Rechnungen, oder um die Beantragung
+         von Leistungen wie Bürgergeld oder Wohngeld?                                  (Q014)
+   User: Ich habe Schulden bei mehreren Firmen.
+   Bot:  ... In welcher Stadt oder welchem Landkreis wohnen Sie?                       (Q001)
+   User: Kitzingen.
+   Bot:  Ich empfehle Ihnen: Schuldner- und Insolvenzberatung.
+         Diakonisches Werk Kitzingen e. V., Mühlbergstraße 1, Tel. 09321 133840
+
+2) Clear request – no questions
+   User: Mein Mann trinkt jeden Abend, wir wohnen in Lohr.
+   Bot:  Ich empfehle Ihnen: Suchtberatung.
+         Caritasverband für den Landkreis Main-Spessart, Vorstadtstraße 68, Lohr
+
+3) Crisis – emergency numbers first, then continues
+   User: Ich will nicht mehr leben.
+   Bot:  Notruf 112 · TelefonSeelsorge 0800 111 0 111 · ... Sie sind nicht allein.
+   User: Was für Hilfe brauche ich denn?
+   Bot:  Ich empfehle Ihnen: Krisenhilfe, Telefonseelsorge und Suizidprävention.
+         Fachstelle Suizidberatung Würzburg, Tel. 0931 571717
+
+4) Ukrainian speaker
+   User: Я з України, мені потрібна допомога з документами від Ausländerbehörde
+   Bot:  Щоб я міг знайти потрібний офіс поруч з вами: у якому місті чи районі ви живете?
+   User: Швайнфурт
+   Bot:  Рекомендую: Flüchtlings- und Integrationsberatung.
+         Caritasverband Schweinfurt, Conn-Straße 1

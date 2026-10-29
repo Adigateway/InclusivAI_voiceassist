@@ -1,0 +1,1636 @@
+[
+  {
+    "service_slug": "familie",
+    "section": "familie",
+    "title_de": "Familie",
+    "description_raw": "Der Caritasverband begleitet und unterstützt Familien in der Erziehungshilfe und Familienpflege, mit Erholungsaufenthalten für Mütter und Kinder und mit Förderschulen.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/familie/",
+    "offices": []
+  },
+  {
+    "service_slug": "besuchsdienste",
+    "section": "familie",
+    "title_de": "Besuchsdienste",
+    "description_raw": "Viele ältere Menschen leben allein und haben - besonders wenn sie pflegebedürftig sind - nur sehr wenige soziale Kontakte. In dieser Situation können ehrenamtlich engagierte Menschen gewissermaßen „das Auge zur Welt“ sein. Sie besuchen sie, unterhalten sich mit ihnen und verbringen Zeit mit ihnen. Gelegentlich übernehmen die Ehrenamtlichen auch kleine Besorgungen.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/familie/besuchsdienste/",
+    "offices": []
+  },
+  {
+    "service_slug": "familienpflege",
+    "section": "familie",
+    "title_de": "Familienpflege",
+    "description_raw": "Familienpflege ist ein Angebot für Familien, die kompetente Unterstützung in einer Krisensituation benötigen, z.B. bei akuter Erkrankung der Mutter/des Vaters, bei Kur- und Krankenhausaufenthalt, bei einer Entbindung, bei Suchterkrankungen.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/familie/familienpflege/",
+    "offices": [
+      {
+        "organisation": "Caritasverband für die Diözese Würzburg e. V.",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Franziskanergasse 3",
+        "plz": "97070",
+        "phone": "0931 386-66720",
+        "email": "sabrina.goepfert@caritas-wuerzburg.de",
+        "audience": "professionals/coordination"
+      }
+    ]
+  },
+  {
+    "service_slug": "jugendhilfe",
+    "section": "familie",
+    "title_de": "Jugendhilfe",
+    "description_raw": "Die Jugendsozialarbeit ist ein eigenständiger Teil der Kinder- und Jugendhilfe. Ihr Ziel ist die persönliche Entwicklung sowie die soziale Integration sozial benachteiligter und individuell beeinträchtigter junger Menschen. Die Angebote der Jugendsozialarbeit sollen für junge Menschen zu einem Wendepunkt werden, der ihnen einen neuen Zugang zu ihren Ressourcen und Entwicklungsmöglichkeiten verschafft und ihnen eine hoffnungsvolle Sicht auf die Zukunft ermöglicht. Angesichts der hohen Bedeutung von Ausbildung und Arbeit für die soziale Integration unterstützen die Angebote der Jugendsozialarbeit junge Menschen vor allem in ihrer schulischen Entwicklung, ihrer beruflichen Ausbildung und ihrer Integration in die Arbeitswelt. Hierzu haben sich im Laufe der Zeit die folgenden Handlungsfelder herausgebildet :",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/familie/jugendhilfe/",
+    "offices": [
+      {
+        "organisation": "Caritasverband für die Diözese Würzburg e. V.",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Franziskanergasse 3",
+        "plz": "97070",
+        "phone": "0931 386-66720",
+        "email": "sabrina.goepfert@caritas-wuerzburg.de",
+        "audience": "professionals/coordination"
+      }
+    ]
+  },
+  {
+    "service_slug": "kuren-und-erholung",
+    "section": "familie",
+    "title_de": "Kuren Und Erholung",
+    "description_raw": "Mütter und Väter haben unter bestimmten Voraussetzungen Anspruch auf eine Kur. Die Kurberatungsstelle der Caritas berät bezüglich einer geeigneten Kureinrichtung und gibt Hilfestellung bei der Beantragung der medizinischen Vorsorgeleistung.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/familie/kuren-und-erholung/",
+    "offices": [
+      {
+        "organisation": "Caritasverband f. d. Diözese Würzburg e.V.",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Franziskanergasse 3",
+        "plz": "97070",
+        "phone": "0931 386-66659",
+        "email": "martina.zawierta@caritas-wuerzburg.de",
+        "audience": "professionals/coordination"
+      },
+      {
+        "organisation": "Caritasverband für die Diözese Würzburg e.V.",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Franziskanergasse 3",
+        "plz": "97070",
+        "phone": "0931 386-66662",
+        "email": "heike.korbmann@caritas-wuerzburg.de",
+        "audience": "professionals/coordination"
+      }
+    ]
+  },
+  {
+    "service_slug": "nachbarschaftshilfe",
+    "section": "familie",
+    "title_de": "Nachbarschaftshilfe",
+    "description_raw": "Es gibt zahlreiche Möglichkeiten für Andere da zu sein: Hausaufgaben- und Kinderbetreuung, kurzfristige Hilfe im Haushalt und bei Einkäufen, vorlesen und vieles mehr.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/familie/nachbarschaftshilfe/",
+    "offices": []
+  },
+  {
+    "service_slug": "schwangerschaftsberatung",
+    "section": "familie",
+    "title_de": "Schwangerschaftsberatung im Bistum Würzburg",
+    "description_raw": "Eine Schwangerschaft und die Geburt eines Kindes sind eine aufregende Zeit im Leben. Wie ein roter Faden ziehen sich die verschiedenen Arbeitsgebiete der Katholischen Beratungsstelle für Schwangerschaftsfragen durch alle Lebensthemen, Fragestellungen und Interessenslagen rund um eine Schwangerschaft und die ersten Lebensjahre des Kindes.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/familie/schwangerschaftsberatung/",
+    "offices": []
+  },
+  {
+    "service_slug": "jugend",
+    "section": "jugend",
+    "title_de": "Jugend",
+    "description_raw": "Der Caritasverband möchte Jugendliche auf dem Weg zum Erwachsenwerden begleiten und steht mit Rat und Tat zur Seite, wenn es mal schwierig werden sollte.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/jugend/",
+    "offices": []
+  },
+  {
+    "service_slug": "agke",
+    "section": "jugend",
+    "title_de": "AGkE Diözese Würzburg e. V.",
+    "description_raw": " ist ein Fach- und Beratungsforum für ihre Einrichtungen und Dienste. Sie ist der partnerschaftlichen Zusammenarbeit ihrer Mitglieder verpflichtet. Sie berät den Diözesancaritasverband in Fragen der Erziehungshilfe und der Jugendsozialarbeit und vertritt innerhalb des Diözesancaritasverbandes die Interessen dieser Arbeitsfelder.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/jugend/agke/",
+    "offices": []
+  },
+  {
+    "service_slug": "erziehungshilfe",
+    "section": "jugend",
+    "title_de": "Erziehungsberatung",
+    "description_raw": " werden sowohl Familien in Erziehungsfragen beraten, unterstützt und gefördert, als auch einzelne Kinder und Jugendliche.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/jugend/erziehungshilfe/",
+    "offices": [
+      {
+        "organisation": "Außensprechstunde Aschaffenburg - Schloßberg 4",
+        "city": "Aschaffenburg",
+        "region": "Aschaffenburg (Stadt/Land)",
+        "street": "Treibgasse 26",
+        "plz": "63739",
+        "phone": "06021 392-301",
+        "email": null,
+        "audience": "public"
+      },
+      {
+        "organisation": "Außensprechstunde Bad Brückenau - Ernst-Putz-Straße 4a",
+        "city": "Bas Kissingen",
+        "region": "Bad Kissingen",
+        "street": "Hartmannstr. 2a",
+        "plz": "97688",
+        "phone": "0971 7246-9200",
+        "email": null,
+        "audience": "public"
+      },
+      {
+        "organisation": "Erziehungsberatungsstelle Bad Neustadt / Saale",
+        "city": "Bad Neustadt",
+        "region": "Rhön-Grabfeld",
+        "street": "Kellereigasse 12",
+        "plz": "97616",
+        "phone": "09771 6116-15",
+        "email": null,
+        "audience": "public"
+      },
+      {
+        "organisation": "Erziehungsberatungsstelle Haßfurt",
+        "city": "Haßfurt",
+        "region": "Haßberge",
+        "street": "Obere Vorstadt 19",
+        "plz": "97437",
+        "phone": "09521 69131",
+        "email": null,
+        "audience": "public"
+      },
+      {
+        "organisation": "Erziehungsberatungsstelle Kitzingen",
+        "city": "Kitzingen",
+        "region": "Kitzingen",
+        "street": "Güterhallstr. 5",
+        "plz": "97318",
+        "phone": "09321 7817",
+        "email": null,
+        "audience": "public"
+      },
+      {
+        "organisation": "Erziehungsberatungsstelle Miltenberg",
+        "city": "Miltenberg",
+        "region": "Miltenberg",
+        "street": "Hauptstraße 60",
+        "plz": "63897",
+        "phone": "09371 9789-20",
+        "email": null,
+        "audience": "public"
+      },
+      {
+        "organisation": "Außensprechstunde Giebelstadt - Obere Kirchgasse 6 - 09334 993242",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Frankfurter Str. 24",
+        "plz": "97082",
+        "phone": "0931 4190461",
+        "email": null,
+        "audience": "public"
+      }
+    ]
+  },
+  {
+    "service_slug": "essstoerungen",
+    "section": "jugend",
+    "title_de": "Essstörungen",
+    "description_raw": "Essstörungen laufen noch immer sehr lange im Verborgenen ab. Viele Betroffene versuchen, allein mit ihrem Problem fertig zu werden und stecken oft in einem Teufelskreis aus Essen, schlechtem Gewissen, Diät und Heißhungeranfällen, teilweise gefolgt von anschließendem Erbrechen.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/jugend/essstoerungen/",
+    "offices": []
+  },
+  {
+    "service_slug": "jugendsozialarbeit",
+    "section": "jugend",
+    "title_de": "Jugendsozialarbeit",
+    "description_raw": "Die Angebote der Jugendsozialarbeit sollen für junge Menschen zu einem Wendepunkt werden, der ihnen einen neuen Zugang zu ihren Ressourcen und Entwicklungsmöglichkeiten verschafft und ihnen eine hoffnungsvolle Sicht auf die Zukunft ermöglicht.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/jugend/jugendsozialarbeit/",
+    "offices": [
+      {
+        "organisation": "Antonia-Werr-Zentrum Kolitzheim",
+        "city": "Kolitzheim",
+        "region": "Schweinfurt (Stadt/Land)",
+        "street": "St. Ludwig",
+        "plz": "97509",
+        "phone": "09385/81 10",
+        "email": "t.buchner@antonia-werr-zentrum.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Caritas-Don Bosco gGmbH Würzburg",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Schottenanger 15",
+        "plz": "97082",
+        "phone": "0931/41 92-167",
+        "email": "glemnitz@bbw-wuerzburg.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Caritas-Don Bosco GmbH Würzburg",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Schottenanger 15",
+        "plz": "97082",
+        "phone": "0931/41 92-605",
+        "email": "hitz@bbw-wuerzburg.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Thomas",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Schottenanger 10",
+        "plz": "97072",
+        "phone": "0931 / 3046940",
+        "email": "schulsozialarbeit@dbs-wuerzburg.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Hans-Walter",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Schottenanger 10 ",
+        "plz": "97082",
+        "phone": "0931 / 3046940",
+        "email": "kranert@dbs-wuerzburg.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Gesellschaft zur beruflichen Förderung Schweinfurt mbH",
+        "city": "Schweinfurt",
+        "region": "Schweinfurt (Stadt/Land)",
+        "street": "Ignaz-Schön-Straße 28",
+        "plz": "97421",
+        "phone": "09721/78 99-155",
+        "email": "gertrud.tuerk@gbf-sw.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Roth",
+        "city": "Schöllkrippen",
+        "region": "Aschaffenburg (Stadt/Land)",
+        "street": "Ernstkirchen 4",
+        "plz": "63825",
+        "phone": "06024/67 34-13",
+        "email": "Bereichsleitung-BvB@haus-mirjam.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "IN VIA Würzburg e. V. / Haus St. Lioba Würzburg",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Berliner Platz 4",
+        "plz": "97080",
+        "phone": "0931/386 66-820",
+        "email": "martina.fallmann@invia-wuerzburg.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Stellvertretung: Lydia Murillo Sanchez, E-Mail: JEB@skf-wue.de",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Augustinerstraße 3",
+        "plz": "97070",
+        "phone": "0931/46 07 95 10",
+        "email": "dick.bernadette@skf-wue.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Kolping-Bildungszentrum Schweinfurt GmbH",
+        "city": "Schweinfurt",
+        "region": "Schweinfurt (Stadt/Land)",
+        "street": "Moritz-Fischer-Str. 3",
+        "plz": "97421",
+        "phone": "09721/78 83-270",
+        "email": "maria.kraft@kolping-mainfranken.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Kolping-Bildungszentrum Würzburg",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Goerdelerstraße 3",
+        "plz": "97084",
+        "phone": "0931/600 84-0",
+        "email": "christine.fabri@kolping-mainfranken.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Kolpinghaus Wohnheime Würzburg",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Kolpingplatz 1",
+        "plz": "97070",
+        "phone": "0931/41 999-513",
+        "email": "manfred.eck@kolping-mainfranken.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Michael",
+        "city": "München",
+        "region": "nan",
+        "street": "Lessingstraße 1",
+        "plz": "80336",
+        "phone": "089/54 49 71 40",
+        "email": "michael.kroll@caritas-bayern.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Egner",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Schottenanger 10",
+        "plz": "97082",
+        "phone": "0931/43 055",
+        "email": "egner@dbs-wuerzburg.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Vinzenz gemeinnützige Serviceleistungen GmbH Würzburg",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Gattingerstr. 15",
+        "plz": "97076",
+        "phone": "0931/386 58-607",
+        "email": null,
+        "audience": "public"
+      }
+    ]
+  },
+  {
+    "service_slug": "jugendwohnen",
+    "section": "jugend",
+    "title_de": "Jugendwohnen",
+    "description_raw": "Jugendwohnen versteht sich im Rahmen von Jugendsozialarbeit in erster Linie als Mobilitätshilfe im Kontext sprachlicher, schulischer und beruflicher Integrationsmaßnahmen sowie der regulären Berufsausbildung oder Beschäftigung junger Menschen außerhalb ihres Wohnortes. ",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/jugend/jugendwohnen/",
+    "offices": []
+  },
+  {
+    "service_slug": "junge-eltern-und-beruf",
+    "section": "jugend",
+    "title_de": "Junge Eltern und Berufsausbildung",
+    "description_raw": "Ist eine Ausbildung mit Kind(ern) überhaupt möglich? Wie schaffe ich es, sowohl meinem Kind als auch den Anforderungen im Ausbildungsbetrieb gerecht zu werden? Wer betreut mein Kind während der Ausbildung? Was mache ich, wenn mein Kind krank wird? Von welchem Geld leben meine Familie und ich? Kann ich meine Ausbildung nach der Schwangerschaft und der Elternzeit in Teilzeitzeit fortführen? – Dies sind nur einige der Fragen, die sich schwangere Frauen/werdende Väter und/oder Mütter und Väter stellen, wenn sie Elternschaft und Ausbildung miteinander vereinbaren möchten.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/jugend/junge-eltern-und-beruf/",
+    "offices": []
+  },
+  {
+    "service_slug": "suchtberatung",
+    "section": "jugend",
+    "title_de": "Suchtberatung",
+    "description_raw": " der Caritas beraten Menschen, die Probleme mit Alkohol, Medikamenten, Drogen, Spielsucht oder Essstörungen haben. Sie beraten auf Wunsch Ehepartner, Angehörige, Freunde, Bekannte und das soziale Umfeld ihrer Klienten.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/jugend/suchtberatung/",
+    "offices": [
+      {
+        "organisation": "Caritasverband für den Landkreis Bad Kissingen e.V. - Psychosoziale Beratungsstelle für Suchtprobleme für Jugendliche",
+        "city": "Bad Kissingen",
+        "region": "Bad Kissingen",
+        "street": "Hartmannstraße 2 a",
+        "plz": "97688",
+        "phone": "0971 72469203",
+        "email": "v.bartzsch@caritas-kissingen.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Caritasverband für den Landkreis Haßberge e. V. - Jugendsuchtberatung",
+        "city": "Haßfurt",
+        "region": "Haßberge",
+        "street": "Promenade 37",
+        "plz": "97437",
+        "phone": "09521 926563",
+        "email": "jugendsuchtberatung@caritas-hassberge.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Jugend- und Drogenberatung der Stadt Würzburg",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Kapuzinerstr. 19",
+        "plz": "97070",
+        "phone": "0931 59056",
+        "email": "mail@drogenberatung-wuerzburg.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Caritasverband für die Diözese Würzburg e. V.",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Franziskanergasse 3",
+        "plz": "97070",
+        "phone": "0931 386-66613",
+        "email": "peter.brueckner@caritas-wuerzburg.de",
+        "audience": "professionals/coordination"
+      },
+      {
+        "organisation": "Caritasverband für die Stadt und den Landkreis Aschaffenburg e.V.",
+        "city": "Aschaffenburg",
+        "region": "Aschaffenburg (Stadt/Land)",
+        "street": "Treibgasse 26",
+        "plz": "63739",
+        "phone": "06021 392280",
+        "email": "psb@caritas-aschaffenburg.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Caritasverband für den Landkreis Bad Kissingen e.V.",
+        "city": "Bad Kissingen",
+        "region": "Bad Kissingen",
+        "street": "Hartmannstraße 2 a",
+        "plz": "97688",
+        "phone": "0971 72469200",
+        "email": "suchtberatung@caritas-kissingen.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Caritasverband für den Landkreis Haßberge e.V.",
+        "city": "Haßfurt",
+        "region": "Haßberge",
+        "street": "Promenade 37",
+        "plz": "97437",
+        "phone": "09521 926550",
+        "email": "suchtberatung@caritas-hassberge.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Caritasverband für den Landkreis Kitzingen e.V.",
+        "city": "Kitzingen",
+        "region": "Kitzingen",
+        "street": "Schrannenstraße 10 ",
+        "plz": "97318",
+        "phone": "09321 22040",
+        "email": "suchtberatung@caritas-kitzingen.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Caritasverband für den Landkreis Main-Spessart e.V.",
+        "city": "Lohr am Main",
+        "region": "Main-Spessart",
+        "street": "Vorstadtstraße 68",
+        "plz": "97816",
+        "phone": "09352 843121",
+        "email": "psb@caritas-msp.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Caritasverband für den Landkreis Miltenberg e.V.",
+        "city": "Miltenberg",
+        "region": "Miltenberg",
+        "street": "Hauptstraße 60",
+        "plz": "63897",
+        "phone": "09371 978940",
+        "email": "psb@caritas-mil.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Caritasverband für den Landkreis Rhön-Grabfeld e. V.",
+        "city": "Bad Neustadt/Saale",
+        "region": "Rhön-Grabfeld",
+        "street": "Kellereigasse 12 - 16",
+        "plz": "97616",
+        "phone": "09771 61160",
+        "email": "suchtberatung@caritas-nes.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Diakonisches Werk Schweinfurt",
+        "city": "Schweinfurt",
+        "region": "Schweinfurt (Stadt/Land)",
+        "street": "Zehntstraße 22",
+        "plz": "97421",
+        "phone": "09721 209550",
+        "email": "suchtberatung@diakonie-schweinfurt.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Matthias-Ehrenfried-Haus",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Bahnhofstraße 4-6",
+        "plz": "97070",
+        "phone": "0931 38659180",
+        "email": "sucht@caritas-wuerzburg.org",
+        "audience": "public"
+      },
+      {
+        "organisation": "Jugend- und Drogenberatung der Stadt Würzburg",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Kapuzinerstr. 19",
+        "plz": "97070",
+        "phone": "0931 59056",
+        "email": "mail@drogenberatung-wuerzburg.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Blaues Kreuz Diakoniewerk mGmbH",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Haugerring 8",
+        "plz": "97070",
+        "phone": "0931 35905220",
+        "email": "suchtberatung.wuerzburg@blaues-kreuz.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Kreuzbund Diözesanverband Würzburg e.V.",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Franziskanergasse 3",
+        "plz": "97070",
+        "phone": "0931 38658550",
+        "email": "info@kreuzbund-wuerzburg.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Caritasverband für die Diözese Würzburg e. V.",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Franziskanergasse 3",
+        "plz": "97070",
+        "phone": "0931 386-66613",
+        "email": "peter.brueckner@caritas-wuerzburg.de",
+        "audience": "professionals/coordination"
+      }
+    ]
+  },
+  {
+    "service_slug": "kinder",
+    "section": "kinder",
+    "title_de": "Kinder",
+    "description_raw": "Die Angebote der Caritas für Kinder sind vielfältig und reichen von der Frühförderung im jüngsten Alter über Kindertageseinrichtungen bis zu Kur- und Erholungsangeboten.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/kinder/",
+    "offices": []
+  },
+  {
+    "service_slug": "fruehfoerderung",
+    "section": "kinder",
+    "title_de": "Frühförderung",
+    "description_raw": "Die Frühförderung ist ein offenes Beratungs- und Hilfeangebot für Eltern, wenn diese sich hinsichtlich der Entwicklung ihres Kindes Sorgen machen oder wenn eine Entwicklungsbeeinträchtigung oder Behinderung des Kindes droht bzw. vorliegt. ",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/kinder/fruehfoerderung/",
+    "offices": [
+      {
+        "organisation": "Frühförderstelle Aschaffenburg Stadt und Landkreis",
+        "city": "Aschaffenburg",
+        "region": "Aschaffenburg (Stadt/Land)",
+        "street": "Elisenstraße 9",
+        "plz": "63739",
+        "phone": "06021 38660-0",
+        "email": "info@fruehfoerderung-aschaffenburg.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Frühförderstelle Gerolzhofen",
+        "city": "Gerolzhofen",
+        "region": "Schweinfurt (Stadt/Land)",
+        "street": "Herrmann-Löns-Straße 2",
+        "plz": "97447",
+        "phone": "09382 315484",
+        "email": "info@fruehfoerderstelle-geo.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Frühförderstelle Haßfurt",
+        "city": "Haßfurt",
+        "region": "Haßberge",
+        "street": "Hauptstr. 19",
+        "plz": "97437",
+        "phone": "09521 8776",
+        "email": "info@fruehfoerderstelle-geo.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Frühförderstelle der St.-Kilian-Schule Marktheidenfeld",
+        "city": "Marktheidenfeld",
+        "region": "Main-Spessart",
+        "street": "Würzburger Straße 12 a",
+        "plz": "97828",
+        "phone": "09391 9188803",
+        "email": "info@fruehfoerderstelle.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Frühförderstelle Schweinfurt",
+        "city": "Schweinfurt",
+        "region": "Schweinfurt (Stadt/Land)",
+        "street": "St.-Anton-Str. 14",
+        "plz": "97421",
+        "phone": "09721 4741002",
+        "email": "info@fruehfoerderstelle-geo.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Caritas-Frühförderstelle Ebern",
+        "city": "Ebern",
+        "region": "Haßberge",
+        "street": "Im Frauengrund 12",
+        "plz": "96106",
+        "phone": "09382 315484",
+        "email": "info@fruehfoerderstelle-geo.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Frühförderstelle der Maria-Stern-Schule Würzburg",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Felix-Dahn-Straße 11",
+        "plz": "97072",
+        "phone": "0931 8006-200",
+        "email": "maria-stern-schule@t-online.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Interdisziplinäre Frühförderstelle Würzburg Stadt und Land",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Berliner Platz 11",
+        "plz": "97080",
+        "phone": "0931 98081-0",
+        "email": "ff@fruehfoerderung-wuerzburg.de",
+        "audience": "public"
+      }
+    ]
+  },
+  {
+    "service_slug": "kindertageseinrichtungen",
+    "section": "kinder",
+    "title_de": "Kindertageseinrichtungen",
+    "description_raw": "Im Bistum Würzburg gibt es etwa 500 katholische Kindertageseinrichtungen (Kindergärten, Horte und Kinderkrippen), die zusammen 61 Prozent aller Kindertagesstätten in Unterfranken stellen. Ca. 5.000 Mitarbeiterinnen und Mitarbeiter betreuen, erziehen und bilden hier rund 28.000 Kinder.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/kinder/kindertageseinrichtungen/",
+    "offices": []
+  },
+  {
+    "service_slug": "kita-fachberatung",
+    "section": "kinder",
+    "title_de": "KiTa-Fachberatung",
+    "description_raw": "Mehr als 500 Tageseinrichtungen für Kinder, Krippen, Kitas und Horte, gibt es im Bistum Würzburg. Sie werden getragen von zahlreichen Vereinen oder von der Kirchenstiftung am Ort. Der Caritasverband für die Diözese Würzburg unterstützt und begleitet die Arbeit der Träger und deren Personal in",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/kinder/kita-fachberatung/",
+    "offices": [
+      {
+        "organisation": "Caritasverband für die Diözese Würzburg e. V.",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Franziskanergasse 3",
+        "plz": "97070",
+        "phone": "0931 386-66725",
+        "email": "kerstin.malterre@caritas-wuerzburg.de",
+        "audience": "professionals/coordination"
+      }
+    ]
+  },
+  {
+    "service_slug": "kur-und-erholung",
+    "section": "kinder",
+    "title_de": "Kur und Erholung",
+    "description_raw": "Viele Kinder brauchen aus gesundheitlichen Gründen eine heilsame Auszeit. Die Caritas bietet ihnen Rehabilitations-, Kur- und Erholungsmaßnahmen an und unterstützt bei der Antragsstellung.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/kinder/kur-und-erholung/",
+    "offices": [
+      {
+        "organisation": "Caritasverband f. d. Diözese Würzburg e.V.",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Franziskanergasse 3",
+        "plz": "97070",
+        "phone": "0931 386-66659",
+        "email": "martina.zawierta@caritas-wuerzburg.de",
+        "audience": "professionals/coordination"
+      }
+    ]
+  },
+  {
+    "service_slug": "menschen-in-krisensituationen",
+    "section": "menschen-in-krisensituationen",
+    "title_de": "Menschen in Krisensituationen",
+    "description_raw": "Wenn das Leben Herausforderungen an Sie stellt, die Sie im Moment nicht allein bewältigen können. Wenn Sie in einer akuten Krise jemanden brauchen … Wir sind für Sie da!",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/menschen-in-krisensituationen/",
+    "offices": []
+  },
+  {
+    "service_slug": "allgemeine-sozialberatung",
+    "section": "menschen-in-krisensituationen",
+    "title_de": "Allgemeine Sozialberatung",
+    "description_raw": " fungiert als anerkannte Fachstelle der Caritas für den Armutsbereich. Er ist unverzichtbarer Grunddienst der Caritas. Die neun Sozialberatungsdienste der Caritas in Unterfranken bieten ein niederschwelliges Beratungs- und Unterstützungsangebot in einem flächendeckenden Netzwerk.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/menschen-in-krisensituationen/allgemeine-sozialberatung/",
+    "offices": [
+      {
+        "organisation": "Allgemeiner Sozialdienst",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Bahnhofstr. 4-6",
+        "plz": "97070",
+        "phone": null,
+        "email": null,
+        "audience": "public"
+      },
+      {
+        "organisation": "Allgemeiner Sozialer Beratungsdienst",
+        "city": "Aschaffenburg",
+        "region": "Aschaffenburg (Stadt/Land)",
+        "street": "nan",
+        "plz": "63739",
+        "phone": "06021 392-206",
+        "email": "info@caritas-aschaffenburg.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Caritasverband für den Landkreis Bad Kissingen e.V.",
+        "city": "Bad Kissingen",
+        "region": "Bad Kissingen",
+        "street": "Hartmannstr. 2 a",
+        "plz": "97688",
+        "phone": "0971 7246-17",
+        "email": "asbd@caritas-kissingen.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Caritasverband für den Landkreis Haßberge e.V.",
+        "city": "Haßfurt",
+        "region": "Haßberge",
+        "street": "Obere Vorstadt 19",
+        "plz": "97437",
+        "phone": "09521 691-0",
+        "email": "caritas@caritas-hassberge.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Caritasverband für den Landkreis Kitzingen e.V.",
+        "city": "Kitzingen",
+        "region": "Kitzingen",
+        "street": "Schrannenstr. 10",
+        "plz": "97318",
+        "phone": "09321 2203-0",
+        "email": "info@caritas-kitzingen.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Caritasverband für den Landkreis Main-Spessart e.V.",
+        "city": "Lohr",
+        "region": "Main-Spessart",
+        "street": "Vorstadtstr. 68",
+        "plz": "97816",
+        "phone": "09352 8431-19",
+        "email": "geschaeftsstelle@caritas-msp.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Caritasverband für den Landkreis Miltenberg e.V.",
+        "city": "Bürgstadt",
+        "region": "Miltenberg",
+        "street": "Hauptstraße 41",
+        "plz": "63927",
+        "phone": "09371 9789-45",
+        "email": "info@caritas-mil.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Caritasverband für die Stadt und den Landkreis Schweinfurt e.V.",
+        "city": "Schweinfurt",
+        "region": "Schweinfurt (Stadt/Land)",
+        "street": "St.-Anton-Str. 8",
+        "plz": "97422",
+        "phone": "09721/7158-30",
+        "email": "asbd@caritas-schweinfurt.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Caritasverband für den Landkreis Rhön-Grabfeld e. V.",
+        "city": "Bad Neustadt",
+        "region": "Rhön-Grabfeld",
+        "street": "Kellereigasse 12-16",
+        "plz": "97616",
+        "phone": "09771 6116-0",
+        "email": null,
+        "audience": "public"
+      },
+      {
+        "organisation": "Caritasverband für die Diözese Würzburg e. V.",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Franziskanergasse 3",
+        "plz": "97070",
+        "phone": "0931 386 66614",
+        "email": "kilian.bundschuh@caritas-wuerzburg.de",
+        "audience": "professionals/coordination"
+      }
+    ]
+  },
+  {
+    "service_slug": "fachambulanz-fuer-sexualstraftaeter",
+    "section": "menschen-in-krisensituationen",
+    "title_de": "Fachambulanz Fuer Sexualstraftaeter",
+    "description_raw": "Die Psychotherapeutische Fachambulanz für Sexual- und Gewaltstraftäter des Caritasverbandes für die Diözese Würzburg e. V. wurde für Menschen eingerichtet, die wegen eines Sexualdeliktes oder eines Gewaltdeliktes mit dem Gesetz in Konflikt geraten sind und eventuell bereits eine Auflage zur psychotherapeutischen Behandlung (Bewährungsauflage bzw. Führungsaufsicht) durch das Gericht haben. ",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/menschen-in-krisensituationen/fachambulanz-fuer-sexualstraftaeter/",
+    "offices": [
+      {
+        "organisation": "Ihr Ansprechpartner",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Franziskanergasse 3",
+        "plz": "97070",
+        "phone": "0931 386-66500",
+        "email": "fachambulanz@caritas-wuerzburg.de",
+        "audience": "professionals/coordination"
+      }
+    ]
+  },
+  {
+    "service_slug": "hilfen-fuer-frauen-1",
+    "section": "menschen-in-krisensituationen",
+    "title_de": "Hilfen für Frauen",
+    "description_raw": "Existenzielle Notlagen betreffen Frauen wie Männer. Geschlechtsspezifische Beratungs- und Unterstützungsangebote für Frauen in Notlagen, schwierigen Lebenssituationen und insbesondere bei häuslicher Gewalt sind unverzichtbar. Diese Angebote werden in Unterfranken insbesondere vom Sozialdienst katholischer Frauen e. V. in Würzburg, Schweinfurt und Aschaffenburg, von InVia e. V. in Würzburg und Aschaffenburg und von den Oberzeller Franziskanerinnen in Würzburg vorgehalten. ",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/menschen-in-krisensituationen/hilfen-fuer-frauen-1/",
+    "offices": []
+  },
+  {
+    "service_slug": "hivaids",
+    "section": "menschen-in-krisensituationen",
+    "title_de": "Hivaids",
+    "description_raw": "Mit der Diagnose 'HIV positiv' scheint erst einmal die Welt zusammenzubrechen. Viele beklemmende Fragen stürzen auf sie ein, nichts ist mehr wie vorher. Wie kann ich damit leben? Was wird meine Familie, mein Freundeskreis dazu sagen? Wem kann ich es überhaupt erzählen? Worauf muss ich jetzt achten? Kann ich meinen Beruf noch weiter ausüben? Und viele Fragen mehr ...",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/menschen-in-krisensituationen/hivaids/",
+    "offices": []
+  },
+  {
+    "service_slug": "krisenhilfe-telefonseelsorge-und-suizidpraevention",
+    "section": "menschen-in-krisensituationen",
+    "title_de": "Krisenhilfe: Telefonseelsorge und Suizidprävention",
+    "description_raw": "Krisen gehören zum Leben dazu und können jederzeit eintreten. Eine Trennung, der Tod eines Angehörigen, der Verlust des Arbeitsplatzes oder eine schwere Krankheit ",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/menschen-in-krisensituationen/krisenhilfe-telefonseelsorge-und-suizidpraevention/",
+    "offices": [
+      {
+        "organisation": "Fachstelle Suizidberatung",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Kardinal-Döpfner-Platz 1",
+        "plz": "97070",
+        "phone": "0931 571717",
+        "email": "info@fachstelle-suizidberatung.de",
+        "audience": "public"
+      }
+    ]
+  },
+  {
+    "service_slug": "schuldnerberatung",
+    "section": "menschen-in-krisensituationen",
+    "title_de": "Schuldnerberatung",
+    "description_raw": "Die Schuldnerberatungsstellen der Caritas, ihrer Fachverbände und ihrer Kooperationspartner helfen, wenn finanzielle Sorgen und Probleme ausweglos erscheinen und unterstützen Rat- und Hilfesuchende dabei, existenznotwendige Sozialleistungen zu beantragen oder zu sichern. Die Schuldner- und Insolvenzberatung ist eine originäre Kernaufgabe von Kirche. Sie begleitet und berät überschuldete Menschen.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/menschen-in-krisensituationen/schuldnerberatung/",
+    "offices": [
+      {
+        "organisation": "Schuldner- und Insolvenzberatung für die Stadt und den Landkreis Würzburg",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Neubaustr. 40 ",
+        "plz": "97070",
+        "phone": "0931 322413",
+        "email": "info@christophorus.com",
+        "audience": "public"
+      },
+      {
+        "organisation": "Caritasverband für den Landkreis Miltenberg e. V.",
+        "city": "Bürgstadt",
+        "region": "Miltenberg",
+        "street": "Hauptstraße 41",
+        "plz": "63927",
+        "phone": "09371 978957",
+        "email": "schuldnerberatung@caritas-mil.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Caritasverband für den Landkreis Haßberge e. V.",
+        "city": "Haßfurt",
+        "region": "Haßberge",
+        "street": "Obere Vorstadt 19",
+        "plz": "97437",
+        "phone": "09521 6910",
+        "email": "sib@caritas-hassberge.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Stadt Aschaffenburg - Amt für soziale Leistungen",
+        "city": "Aschaffenburg",
+        "region": "Aschaffenburg (Stadt/Land)",
+        "street": "Dalbergstraße 15",
+        "plz": "63739",
+        "phone": "06021 3301631",
+        "email": "schulderberatung@aschaffenburg.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Diakonie Untermain",
+        "city": "Aschaffenburg",
+        "region": "Aschaffenburg (Stadt/Land)",
+        "street": "Heinsestraße 2-4",
+        "plz": "63739",
+        "phone": "06021 920 64 121",
+        "email": "schuldnerberatung@diakonie-aschaffenburg.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Landratsamt Bad Kissingen",
+        "city": "Bad Kissingen",
+        "region": "Bad Kissingen",
+        "street": "Münchener Str. 5",
+        "plz": "97688",
+        "phone": "0971 8012030",
+        "email": "schuldnerberatung@kg.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Diakonisches Werk Bad Neustadt",
+        "city": "Bad Neustadt a. d. Saale",
+        "region": "Rhön-Grabfeld",
+        "street": "Marktplatz 11",
+        "plz": "97616",
+        "phone": "09771 6309715",
+        "email": "schuldnerberatung@diakonie-nes.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Diakonisches Werk Kitzingen e. V.",
+        "city": "Kitzingen",
+        "region": "Kitzingen",
+        "street": "Mühlbergstraße 1",
+        "plz": "97318",
+        "phone": "09321 133840",
+        "email": "schulderberatung@diakonie-kitzingen.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Kolping Bildungswerk Schweinfurt gGmbH",
+        "city": "Schweinfurt",
+        "region": "Schweinfurt (Stadt/Land)",
+        "street": "Fischerrain 2",
+        "plz": "97421",
+        "phone": "09721 7389590",
+        "email": "schuldnerberatung@kolping-schweinfurt.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Landratsamt Main-Spessart",
+        "city": "Karlstadt",
+        "region": "Main-Spessart",
+        "street": "Marktplatz 8",
+        "plz": "97753",
+        "phone": "09353 7931136",
+        "email": "Hermann.Bulheller@Lramsp.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Caritasverband für die Diözese Würzburg e. V.",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Franziskanergasse 3",
+        "plz": "97070",
+        "phone": "0931 386-66613",
+        "email": "peter.brueckner@caritas-wuerzburg.de",
+        "audience": "professionals/coordination"
+      }
+    ]
+  },
+  {
+    "service_slug": "sozialpsychiatrische-dienste",
+    "section": "menschen-in-krisensituationen",
+    "title_de": "Sozialpsychiatrische Dienste",
+    "description_raw": "Die Sozialpsychiatrischen Dienste der Caritas sind ein wesentlicher Bestandteil unseres Engagements für Menschen mit psychischen Erkrankungen und ihren Angehörigen. Als Spitzenverband setzen wir uns dafür ein, dass Betroffene Zugang zu niedrigschwelligen und ganzheitlichen, ambulanten Hilfsangeboten erhalten, die sie in schwierigen Lebenssituationen unterstützen und ihnen eine Teilhabe am gesellschaftlichen Leben ermöglichen.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/menschen-in-krisensituationen/sozialpsychiatrische-dienste/",
+    "offices": [
+      {
+        "organisation": "Sozialpsychiatrischer Dienst Würzburg",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Adresse: Juliuspromenade 3",
+        "plz": "97070",
+        "phone": null,
+        "email": null,
+        "audience": "public"
+      },
+      {
+        "organisation": "Telefon: 0931 55445",
+        "city": "Gemünden",
+        "region": "Main-Spessart",
+        "street": "Adresse: Obertorstr. 3",
+        "plz": "97737",
+        "phone": null,
+        "email": null,
+        "audience": "public"
+      },
+      {
+        "organisation": "Telefon: 09351 2031",
+        "city": "Marktheidenfeld",
+        "region": "Main-Spessart",
+        "street": "Adresse: Petzoltstraße 4 und 6",
+        "plz": "97828",
+        "phone": null,
+        "email": null,
+        "audience": "public"
+      },
+      {
+        "organisation": "nan",
+        "city": "Haßfurt",
+        "region": "Haßberge",
+        "street": "Adresse: Promenade 37",
+        "plz": "97437",
+        "phone": null,
+        "email": null,
+        "audience": "public"
+      },
+      {
+        "organisation": "nan",
+        "city": "Schweinfurt",
+        "region": "Schweinfurt (Stadt/Land)",
+        "street": "Adresse: St.-Anton-Str. 8",
+        "plz": "97422",
+        "phone": null,
+        "email": null,
+        "audience": "public"
+      }
+    ]
+  },
+  {
+    "service_slug": "straffaelligenhilfe",
+    "section": "menschen-in-krisensituationen",
+    "title_de": "Straffaelligenhilfe",
+    "description_raw": "Die Caritas in Unterfranken und ihre Fachverbände halten viele Angebote für straffälige und haftentlassene Menschen und ihre Angehörigen bereit. Ziel der Einrichtungen und Dienste ist es, Menschen zu stärken und sie zu ermutigen, ihre Lebenssituation zu verbessern. Die Hilfe ist kostenlos, professionell und richtet sich sowohl an straffällig gewordene Menschen als auch an deren Angehörige. ",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/menschen-in-krisensituationen/straffaelligenhilfe/",
+    "offices": [
+      {
+        "organisation": "Caritasverband für die Diözese Würzburg e. V.",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Franziskanergasse 3",
+        "plz": "97070",
+        "phone": "0931 386-66613",
+        "email": "peter.brueckner@caritas-wuerzburg.de",
+        "audience": "professionals/coordination"
+      }
+    ]
+  },
+  {
+    "service_slug": "suchtberatung",
+    "section": "menschen-in-krisensituationen",
+    "title_de": "Suchtberatung",
+    "description_raw": " der Caritas beraten Menschen, die Probleme mit Alkohol, Medikamenten, Drogen, Spielsucht oder Essstörungen haben. Sie beraten auf Wunsch Ehepartner, Angehörige, Freunde, Bekannte und das soziale Umfeld ihrer Klienten.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/menschen-in-krisensituationen/suchtberatung/",
+    "offices": [
+      {
+        "organisation": "Caritasverband für den Landkreis Bad Kissingen e.V. - Psychosoziale Beratungsstelle für Suchtprobleme für Jugendliche",
+        "city": "Bad Kissingen",
+        "region": "Bad Kissingen",
+        "street": "Hartmannstraße 2 a",
+        "plz": "97688",
+        "phone": "0971 72469203",
+        "email": "v.bartzsch@caritas-kissingen.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Caritasverband für den Landkreis Haßberge e. V. - Jugendsuchtberatung",
+        "city": "Haßfurt",
+        "region": "Haßberge",
+        "street": "Promenade 37",
+        "plz": "97437",
+        "phone": "09521 926563",
+        "email": "jugendsuchtberatung@caritas-hassberge.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Jugend- und Drogenberatung der Stadt Würzburg",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Kapuzinerstr. 19",
+        "plz": "97070",
+        "phone": "0931 59056",
+        "email": "mail@drogenberatung-wuerzburg.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Caritasverband für die Diözese Würzburg e. V.",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Franziskanergasse 3",
+        "plz": "97070",
+        "phone": "0931 386-66613",
+        "email": "peter.brueckner@caritas-wuerzburg.de",
+        "audience": "professionals/coordination"
+      },
+      {
+        "organisation": "Caritasverband für die Stadt und den Landkreis Aschaffenburg e.V.",
+        "city": "Aschaffenburg",
+        "region": "Aschaffenburg (Stadt/Land)",
+        "street": "Treibgasse 26",
+        "plz": "63739",
+        "phone": "06021 392280",
+        "email": "psb@caritas-aschaffenburg.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Caritasverband für den Landkreis Bad Kissingen e.V.",
+        "city": "Bad Kissingen",
+        "region": "Bad Kissingen",
+        "street": "Hartmannstraße 2 a",
+        "plz": "97688",
+        "phone": "0971 72469200",
+        "email": "suchtberatung@caritas-kissingen.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Caritasverband für den Landkreis Haßberge e.V.",
+        "city": "Haßfurt",
+        "region": "Haßberge",
+        "street": "Promenade 37",
+        "plz": "97437",
+        "phone": "09521 926550",
+        "email": "suchtberatung@caritas-hassberge.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Caritasverband für den Landkreis Kitzingen e.V.",
+        "city": "Kitzingen",
+        "region": "Kitzingen",
+        "street": "Schrannenstraße 10 ",
+        "plz": "97318",
+        "phone": "09321 22040",
+        "email": "suchtberatung@caritas-kitzingen.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Caritasverband für den Landkreis Main-Spessart e.V.",
+        "city": "Lohr am Main",
+        "region": "Main-Spessart",
+        "street": "Vorstadtstraße 68",
+        "plz": "97816",
+        "phone": "09352 843121",
+        "email": "psb@caritas-msp.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Caritasverband für den Landkreis Miltenberg e.V.",
+        "city": "Miltenberg",
+        "region": "Miltenberg",
+        "street": "Hauptstraße 60",
+        "plz": "63897",
+        "phone": "09371 978940",
+        "email": "psb@caritas-mil.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Caritasverband für den Landkreis Rhön-Grabfeld e. V.",
+        "city": "Bad Neustadt/Saale",
+        "region": "Rhön-Grabfeld",
+        "street": "Kellereigasse 12 - 16",
+        "plz": "97616",
+        "phone": "09771 61160",
+        "email": "suchtberatung@caritas-nes.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Diakonisches Werk Schweinfurt",
+        "city": "Schweinfurt",
+        "region": "Schweinfurt (Stadt/Land)",
+        "street": "Zehntstraße 22",
+        "plz": "97421",
+        "phone": "09721 209550",
+        "email": "suchtberatung@diakonie-schweinfurt.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Matthias-Ehrenfried-Haus",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Bahnhofstraße 4-6",
+        "plz": "97070",
+        "phone": "0931 38659180",
+        "email": "sucht@caritas-wuerzburg.org",
+        "audience": "public"
+      },
+      {
+        "organisation": "Jugend- und Drogenberatung der Stadt Würzburg",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Kapuzinerstr. 19",
+        "plz": "97070",
+        "phone": "0931 59056",
+        "email": "mail@drogenberatung-wuerzburg.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Blaues Kreuz Diakoniewerk mGmbH",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Haugerring 8",
+        "plz": "97070",
+        "phone": "0931 35905220",
+        "email": "suchtberatung.wuerzburg@blaues-kreuz.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Kreuzbund Diözesanverband Würzburg e.V.",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Franziskanergasse 3",
+        "plz": "97070",
+        "phone": "0931 38658550",
+        "email": "info@kreuzbund-wuerzburg.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Caritasverband für die Diözese Würzburg e. V.",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Franziskanergasse 3",
+        "plz": "97070",
+        "phone": "0931 386-66613",
+        "email": "peter.brueckner@caritas-wuerzburg.de",
+        "audience": "professionals/coordination"
+      }
+    ]
+  },
+  {
+    "service_slug": "wohnsitzlosigkeit",
+    "section": "menschen-in-krisensituationen",
+    "title_de": "Wohnsitzlosigkeit",
+    "description_raw": "Obdach- und Wohnungslosigkeit dürfen keine Endstation sein. Der Weg hinaus ist nicht immer einfach, aber Menschen, die das betrifft, müssen ihn nicht allein gehen. Die Kirche und ihre Caritas sowie andere Wohlfahrtsverbände halten in Unterfranken ein Netz von Einrichtungen und Diensten der Wohnungsnotfallhilfe bereit. Diese setzen sich ein für die Belange von obdach- und wohnungslosen Menschen oder auch von Menschen, die Gefahr laufen, ihre Wohnung zu verlieren und bieten differenzierte Hilfen an.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/menschen-in-krisensituationen/wohnsitzlosigkeit/",
+    "offices": [
+      {
+        "organisation": "Caritasverband für die Diözese Würzburg e. V.",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Franziskanergasse 3",
+        "plz": "97070",
+        "phone": "0931 386-66613",
+        "email": "peter.brueckner@caritas-wuerzburg.de",
+        "audience": "professionals/coordination"
+      }
+    ]
+  },
+  {
+    "service_slug": "menschen-mit-behinderung",
+    "section": "menschen-mit-behinderung",
+    "title_de": "Menschen mit Behinderung",
+    "description_raw": "Die Caritas in der Diözese Würzburg bietet ein breites Netz aus Einrichtungen und Diensten, die Menschen mit Behinderungen sowie psychischen Erkrankungen begleiten und unterstützen. Ziel ist es, ihnen ein selbstbestimmtes Leben und eine gleichberechtigte Teilhabe an der Gesellschaft zu ermöglichen.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/menschen-mit-behinderung/",
+    "offices": []
+  },
+  {
+    "service_slug": "foerderschulen",
+    "section": "menschen-mit-behinderung",
+    "title_de": "Förderschulen",
+    "description_raw": "",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/menschen-mit-behinderung/foerderschulen/",
+    "offices": []
+  },
+  {
+    "service_slug": "migrationasyl",
+    "section": "migrationasyl",
+    "title_de": "Migration und Integration",
+    "description_raw": "Aus unterschiedlichen Gründen kommen Menschen aus dem Ausland zu uns nach Deutschland. Manche suchen hier neue Lebensperspektiven, andere zwingt Gewalt, Terror, Verfolgung und Krieg ihre Heimat zu verlassen und eine neue Zuflucht zu suchen. Wiederum andere möchten Deutschland wieder verlassen und weiterwandern oder zurückkehren in ihre Heimatländer.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/migrationasyl/",
+    "offices": [
+      {
+        "organisation": "Caritasverband für die Diözese Würzburg e. V.",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Franziskanergasse 3",
+        "plz": "97070",
+        "phone": "0931 386 66734",
+        "email": "patrick.sammetinger@caritas-wuerzburg.de",
+        "audience": "professionals/coordination"
+      }
+    ]
+  },
+  {
+    "service_slug": "adressen-migrationsdienste",
+    "section": "migrationasyl",
+    "title_de": "Migrationsdienste in Unterfranken",
+    "description_raw": "",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/migrationasyl/adressen-migrationsdienste/",
+    "offices": [
+      {
+        "organisation": "Caritasverband für die Stadt und den Landkreis Aschaffenburg e. V.",
+        "city": "Aschaffenburg",
+        "region": "Aschaffenburg (Stadt/Land)",
+        "street": "Treibgasse 26",
+        "plz": "63739",
+        "phone": "06021 392-121",
+        "email": "w.katholing@caritas-aschaffenburg.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Caritasverband für den Landkreis Bad Kissingen e. V.",
+        "city": "Bad Kissingen",
+        "region": "Bad Kissingen",
+        "street": "Hartmannstraße 2a",
+        "plz": "97688",
+        "phone": "0971 7246-9200",
+        "email": "j.ort@caritas-kissingen.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Caritasverband für den Landkreis Rhön-Grabfeld e. V.",
+        "city": "Bad Neustadt/Saale",
+        "region": "Rhön-Grabfeld",
+        "street": "Kellereigasse 12-16",
+        "plz": "97616",
+        "phone": "09771 6116-25",
+        "email": "silvia.baumbach@caritas-nes.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Caritasverband für den Landkreis Haßberge e. V.",
+        "city": "Haßfurt",
+        "region": "Haßberge",
+        "street": "Brüder-Becker-Straße 42",
+        "plz": "97437",
+        "phone": "09521 952974-0",
+        "email": "asyl@caritas-hassberge.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Caritasverband für den Landkreis Miltenberg e. V.",
+        "city": "Miltenberg",
+        "region": "Miltenberg",
+        "street": "Hauptstraße 60 ",
+        "plz": "63897",
+        "phone": "09371 9789-45",
+        "email": "w-haertel@caritas-mil.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Caritasverband für den Landkreis Kitzingen e. V.",
+        "city": "Kitzingen",
+        "region": "Kitzingen",
+        "street": "Schrannenstraße 10",
+        "plz": "97318",
+        "phone": "09321 220-30",
+        "email": "info@caritas-kitzingen.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Caritasverband für die Stadt und den Landkreis Schweinfurt e. V.",
+        "city": "Schweinfurt",
+        "region": "Schweinfurt (Stadt/Land)",
+        "street": "Conn-Straße 1",
+        "plz": "97505",
+        "phone": "09721 6537-304",
+        "email": "blauth@erstaufnahme-sw.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Caritasverband für den Landkreis Main-Spessart e. V.",
+        "city": "Lohr am Main",
+        "region": "Main-Spessart",
+        "street": "Vorstadtstraße 68",
+        "plz": "97816",
+        "phone": "09352 8431-17",
+        "email": "fluechtlingsberatung@caritas-msp.de",
+        "audience": "public"
+      },
+      {
+        "organisation": "Caritasverband für die Diözese Würzburg e. V.",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Dominikanerplatz 8",
+        "plz": "97070",
+        "phone": "0931 386-58170",
+        "email": null,
+        "audience": "public"
+      },
+      {
+        "organisation": "Caritasverband für die Diözese Würzburg e. V.",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Dominikanerplatz 8",
+        "plz": "97070",
+        "phone": "0931 386-66782",
+        "email": "info@zrb-westbayern.de",
+        "audience": "public"
+      }
+    ]
+  },
+  {
+    "service_slug": "beratung-in-wuerzburg",
+    "section": "migrationasyl",
+    "title_de": "Beratung In Wuerzburg",
+    "description_raw": "Viele Menschen flüchten nach Deutschland, weil sie vor Gewalt, Terror, Verfolgung und Krieg ihre Heimat verlassen. Sie suchen Zuflucht und eine neue Lebensperspektive. Geflüchtete Menschen haben viele Fragen und Nöte. Ihnen stehen die Türen der Flüchtlings- und Integrationsberatung offen.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/migrationasyl/beratung-in-wuerzburg/",
+    "offices": [
+      {
+        "organisation": "Caritasverband für die Diözese Würzburg e.V.",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Dominikanerplatz 8",
+        "plz": "97070",
+        "phone": "0931 38658152",
+        "email": "rainer.jaeckel@caritas-wuerzburg.de",
+        "audience": "professionals/coordination"
+      },
+      {
+        "organisation": "Caritasverband für die Diözese Würzburg e.V.",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Dominikanerplatz 8",
+        "plz": "97070",
+        "phone": null,
+        "email": null,
+        "audience": "public"
+      },
+      {
+        "organisation": "nan",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Gemeinschaftsunterkunft Veitshöchheimer Straße 100",
+        "plz": "97080",
+        "phone": null,
+        "email": null,
+        "audience": "public"
+      },
+      {
+        "organisation": "nan",
+        "city": "Würzburg-Zellerau",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Gemeinschaftsunterkunft Steinachstraße 14",
+        "plz": "97082",
+        "phone": null,
+        "email": null,
+        "audience": "public"
+      }
+    ]
+  },
+  {
+    "service_slug": "rueckkehrberatung",
+    "section": "migrationasyl",
+    "title_de": "Zentrale Rückkehrberatung für Flüchtlinge in Westbayern",
+    "description_raw": "Einem Großteil der Flüchtlinge wird in Deutschland kein dauerhaftes Bleiberecht gewährt. Allein in Bayern leben circa 12.000 Flüchtlinge mit Duldungen. Viele wären bereit, in ihr Heimatland zurückzukehren, wenn ihnen Perspektiven für die Rückkehr gegeben würden. Die zentrale Rückkehrberatung gibt gezielte Informationen über die aktuelle Situation im Heimatland und unterstützt konkret bei der Entscheidungsfindung. Eine selbstbestimmte, selbst gestaltete und freiwillige Rückkehr in Sicherheit und Würde ist einer ausländerrechtlichen Maßnahme, insbesondere einer Abschiebung und Abschiebehaft, vorzuziehen.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/migrationasyl/rueckkehrberatung/",
+    "offices": []
+  },
+  {
+    "service_slug": "praevention",
+    "section": "praevention",
+    "title_de": "Prävention, Interventionskoordination und Aufarbeitung",
+    "description_raw": "Die Ordnung zur Prävention gegen sexualisierte Gewalt an Minderjährigen und erwachsenen Schutzbefohlenen im Bereich der Diözese Würzburg trat am 16.08.2017 in Kraft. Der Caritasverband der Diözese Würzburg hat eine Koordinierungs- und Fachstelle (sexuelle) Gewaltprävention die bei der Umsetzung der Forderungen der Präventionsordnung fachlich beratend den Einrichtungen zu Seite steht.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/praevention/",
+    "offices": []
+  },
+  {
+    "service_slug": "institutionelles-schutzkonzept",
+    "section": "praevention",
+    "title_de": "Institutionelles Schutzkonzept",
+    "description_raw": "Ein Schutzkonzept lässt sich als ein Dialog auf partizipativer Ebene verstehen, Schutzkonzepte dienen dem Schutz der Anvertrauten und Mitarbeitenden in lernenden Institutionen.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/praevention/institutionelles-schutzkonzept/",
+    "offices": []
+  },
+  {
+    "service_slug": "paragrafen-fuer-die-selbstauskunftserklaerung",
+    "section": "praevention",
+    "title_de": "Paragrafen aus dem Strafgesetzbuch (StGB)",
+    "description_raw": "",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/praevention/institutionelles-schutzkonzept/paragrafen-fuer-die-selbstauskunftserklaerung/",
+    "offices": []
+  },
+  {
+    "service_slug": "kontakt",
+    "section": "praevention",
+    "title_de": "Kontakt",
+    "description_raw": "Hier finden Sie für den Caritasverband Ansprechpartnerinnen und -partner im Bereich Prävention, Interventionskoordination und Aufarbeitung. Die Stabsstelle besteht aus folgenden Mitgliedern:",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/praevention/kontakt/",
+    "offices": [
+      {
+        "organisation": "Caritasverband für die Diözese Würzburg e. V.",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Franziskanergasse 3",
+        "plz": "97070",
+        "phone": "0931 386-66633",
+        "email": "stefanie.eisenhuth@caritas-wuerzburg.de",
+        "audience": "professionals/coordination"
+      },
+      {
+        "organisation": "Caritasverband für die Diözese Würzburg e. V.",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Franziskanergasse 3",
+        "plz": "97070",
+        "phone": "0931/386-66641",
+        "email": "florian.fell@caritas-wuerzburg.de",
+        "audience": "professionals/coordination"
+      },
+      {
+        "organisation": "Caritasverband für die Diözese Würzburg e. V.",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Franziskanergasse 3",
+        "plz": "97070",
+        "phone": "0931 386-66712",
+        "email": "tim.braunbeck@caritas-wuerzburg.de",
+        "audience": "professionals/coordination"
+      },
+      {
+        "organisation": "Caritasverband für die Diözese Würzburg e. V.",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Franziskanergasse 3",
+        "plz": "97070",
+        "phone": null,
+        "email": "phyllis.kunad@caritas-wuerzburg.de",
+        "audience": "professionals/coordination"
+      },
+      {
+        "organisation": "Caritasverband für die Diözese Würzburg e. V.",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Franziskanergasse 3",
+        "plz": "97070",
+        "phone": "0931 386-68941",
+        "email": "aaron.roth@caritas-wuerzburg.de",
+        "audience": "professionals/coordination"
+      },
+      {
+        "organisation": "Caritasverband für die Diözese Würzburg e. V.",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Franziskanergasse 3",
+        "plz": "97070",
+        "phone": "0931 386-66709",
+        "email": "praevention@caritas-wuerzburg.de",
+        "audience": "professionals/coordination"
+      }
+    ]
+  },
+  {
+    "service_slug": "weiterfuehrende-materialien",
+    "section": "praevention",
+    "title_de": "Weiterführende Materialien",
+    "description_raw": "Sie brauchen noch mehr Informationen? Sie interessieren sich tiefer in der Thematik oder wollen weitere Bereiche in ihr Schutzkonzept mit einfließen lassen?",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/praevention/weiterfuehrende-materialien/",
+    "offices": []
+  },
+  {
+    "service_slug": "senioren",
+    "section": "senioren",
+    "title_de": "Menschen mit Pflegebedarf",
+    "description_raw": "Heute erreichen viele Menschen ein höheres Lebensalter. Nicht alle Menschen können in der Familie alt werden. Die Caritaseinrichtungen sind hier ein verlässlicher Partner.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/senioren/",
+    "offices": []
+  },
+  {
+    "service_slug": "ambulante-pflege",
+    "section": "senioren",
+    "title_de": "Ambulante Altenpflege",
+    "description_raw": "Die meisten Menschen wollen auch bei Hilfs- und Pflegebedürftigkeit weiterhin in der häuslichen Umgebung bleiben. Durch qualifizierte und passgenaue Angebote wollen unsere Caritas-Sozialstationen dazu beitragen, dass der Wunsch der meisten Menschen nicht nur Wunsch bleibt, sondern Wirklichkeit wird. Unser Netzwerk aus über 40 Caritas-Sozialstationen ist rund um die Uhr für Sie da, wenn Sie in Ihren eigenen vier Wänden Pflege, Beratung oder auch Unterstützung im Haushalt benötigen. Sie vermitteln u.a. Essen auf Rädern, Hausnotrufsysteme und bieten für demenzkranke Menschen verschiedene Formen der Betreuung zu Hause oder in einer Gruppe an.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/senioren/altenhilfe/ambulante-pflege/",
+    "offices": []
+  },
+  {
+    "service_slug": "ambulante-wohngemeinschaften",
+    "section": "senioren",
+    "title_de": "Ambulant betreute Wohngemeinschaften",
+    "description_raw": "Ambulante Wohngemeinschaften sind neue Formen für die Betreuung pflegebedürftiger, meist an Demenz erkrankten Menschen. Ziel der ambulanten Wohngemeinschaften ist es, hilfsbedürftigen Menschen ein weitgehend selbstbestimmtes und würdevolles Altwerden zu ermöglichen. Demenzkranke Menschen erfahren hier neue Lebensqualität und Angehörige werden spürbar entlastet.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/senioren/altenhilfe/ambulante-wohngemeinschaften/",
+    "offices": []
+  },
+  {
+    "service_slug": "diag-altenhilfe",
+    "section": "senioren",
+    "title_de": "Ich will helfen",
+    "description_raw": "Die Arbeitsgemeinschaft der Altenhilfe, Hospizarbeit und Pflege im Caritasverband für die Diözese Würzburg e. V. (DiAG Altenhilfe) ist ein Zusammenschluss der Träger der Dienste und Einrichtungen der Altenhilfe im Bereich des DiCV sowie der Altenpflegeschulen in der Diözese Würzburg. Die Bildung dieser Arbeitsgemeinschaft soll dazu beitragen, gemeinsam den Herausforderungen in der Pflege besser gerecht zu werden sowie die Interessen und Anliegen pflegebedürftiger Menschen sowie der Einrichtungen und Dienste innerhalb des Caritasverbandes für die Diözese Würzburg wirkungsvoll nach außen zu vertreten.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/senioren/altenhilfe/diag-altenhilfe/",
+    "offices": [
+      {
+        "organisation": "Caritasverband für die Diözese Würzburg e.V.",
+        "city": "Würzburg",
+        "region": "Würzburg (Stadt/Land)",
+        "street": "Franziskanergasse 3",
+        "plz": "97070",
+        "phone": "0931 386-66661",
+        "email": "silke.birklein@caritas-wuerzburg.de",
+        "audience": "professionals/coordination"
+      }
+    ]
+  },
+  {
+    "service_slug": "palliativ-ethik-und-hospizarbeit",
+    "section": "senioren",
+    "title_de": "Hospiz, Palliativ und Ethik",
+    "description_raw": "Der Teilbereich Hospiz, Palliativ und Ethik begleitet Projekte zu ethischen Fragestellungen, bietet Fachtage an und vermittelt Handlungsweisen in der Begleitung schwerstkranker und sterbender Menschen. Unter Berücksichtigung der Bedarfe von Einrichtungen und den Bedürfnissen, der dort lebenden Menschen werden Unterstützungsangebote weiterentwickelt und Vernetzungen mit den dazugehörigen Akteuren realisiert. Gemeinsam mit dem Teilbereich Inklusion und Teilhabe werden Menschen mit Behinderungen sowie Menschen mit psychischen Erkrankungen unterstützt.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/senioren/altenhilfe/palliativ-ethik-und-hospizarbeit/",
+    "offices": []
+  },
+  {
+    "service_slug": "teilstationaere-altenhilfe",
+    "section": "senioren",
+    "title_de": "Teilstationäre Altenpflege",
+    "description_raw": "Für den Besuch einer Tagespflege ist kein Pflegegrad notwendig, es reicht aus, wenn Sie Lust auf Aktivitäten und Gemeinschaft mit anderen Menschen haben.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/senioren/altenhilfe/teilstationaere-altenhilfe/",
+    "offices": []
+  },
+  {
+    "service_slug": "vollstationaere-pflege",
+    "section": "senioren",
+    "title_de": "Vollstationäre Altenpflege",
+    "description_raw": "Es gibt Situationen, in denen die Pflege zu Hause nicht mehr sichergestellt werden kann. Wenn Angehörige weit weg wohnen, wenn die die Betreuung und die Pflege körperlich und/oder psychisch zu anspruchsvoll wird, wenn pflegende Angehörige nicht mehr die nötige Kraft verspüren, sind hierfür beispielhafte Situationen. Für Angehörige ist es häufig nicht leicht, diesen Schritt zu gehen. Sie haben das Gefühl, ein Familienmitglied 'abzuschieben' oder sorgen sich, dass es von der pflegebedürftigen Person so verstanden werden könnte.",
+    "url": "https://www.caritas-wuerzburg.de/hilfe-beratung/senioren/altenhilfe/vollstationaere-pflege/",
+    "offices": []
+  }
+]
