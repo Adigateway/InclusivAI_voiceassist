@@ -28,7 +28,7 @@ Speech → STT → LLM case builder ──missing info?──▶ follow-up quest
 
 ## Languages
 
-Speech recognition and speech output run in the browser (Web Speech API, best in Chrome), in the language picked in the header (`de-DE` or `en-GB`). That language goes to the backend, so the reply comes back in German or English. The router can also answer in other languages (Ukrainian, Turkish, Arabic, ...) for typed text.
+Speech recognition runs in the browser (Web Speech API, best in Chrome), in the language picked in the header (`de-DE` or `en-GB`). Answers are read aloud with natural Microsoft neural voices (`/api/tts` via `edge-tts`, free, needs internet): Seraphina for German and Ava for English by default, changeable with `TTS_VOICE_DE` / `TTS_VOICE_EN` in `.env`. If the voice service can't be reached, the browser's own voice is used. Pressing the microphone always stops the current answer. That language goes to the backend, so the reply comes back in German or English. The router can also answer in other languages (Ukrainian, Turkish, Arabic, ...) for typed text.
 
 ## Repository structure
 
@@ -171,6 +171,7 @@ POST /api/search  {"message": "Ich habe Schulden, ich wohne in Lohr", "language"
    "results": [{"title", "category", "description", "match_reason", "url", "offices": [...]}]}
 
 POST /api/reset   {"session": "<id>"}      # "Neues Anliegen"
+POST /api/tts     {"text": "...", "language": "de"}  → audio/mpeg (neural voice)
 GET  /api/health                           # model and active LLM providers
 ```
 
@@ -182,7 +183,7 @@ The backend keeps each conversation per `session`, so follow-up answers ("Kitzin
 - [x] LLM routing (service cards + JSON output + validation)
 - [x] Region and service matcher
 - [x] Web chat UI
-- [x] Voice: browser speech recognition and speech output in the CaritAssist frontend (Chrome recommended)
+- [x] Voice: browser speech recognition + natural neural voice output (edge-tts) in the CaritAssist frontend
 - [x] Crisis detection and safety layer
 - [ ] Demo personas
 

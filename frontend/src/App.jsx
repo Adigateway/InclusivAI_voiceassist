@@ -219,6 +219,8 @@ export default function App() {
   const finalTextRef = useRef("");
   // The backend keeps the conversation per session, so follow-up questions ("Where do you live?") work
   const sessionRef = useRef(newSessionId());
+  const audioRef = useRef(null);
+  const speechTokenRef = useRef(0);
   const t = words[language];
 
   useEffect(() => {
@@ -232,20 +234,59 @@ export default function App() {
         recognitionRef.current?.stop();
       } catch {}
 
-      window.speechSynthesis?.cancel();
+      stopSpeaking();
     };
   }, []);
 
-  function speak(message) {
-    if (!voiceEnabled || !message || !window.speechSynthesis) return;
+  // Stops whatever is being said right now, including an answer that is still loading
+  function stopSpeaking() {
+    speechTokenRef.current += 1;
+    audioRef.current?.pause();
+    audioRef.current = null;
+    window.speechSynthesis?.cancel();
+  }
 
-    window.speechSynthesis.cancel();
-
+  function browserSpeak(message) {
+    if (!window.speechSynthesis) return;
     const utterance = new SpeechSynthesisUtterance(message);
     utterance.lang = language === "de" ? "de-DE" : "en-GB";
     utterance.rate = 0.95;
-
     window.speechSynthesis.speak(utterance);
+  }
+
+  // Natural neural voice from the backend (/api/tts); the browser voice is only a fallback
+  async function speak(message) {
+    if (!voiceEnabled || !message) return;
+
+    stopSpeaking();
+    const token = speechTokenRef.current;
+
+    if (DEMO_MODE) {
+      browserSpeak(message);
+      return;
+    }
+
+    try {
+      const response = await fetch(`${API_BASE_URL.replace(/\/$/, "")}/api/tts`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ text: message, language })
+      });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const blob = await response.blob();
+
+      // the user pressed the microphone or "new request" while the audio was loading
+      if (token !== speechTokenRef.current) return;
+
+      const url = URL.createObjectURL(blob);
+      const audio = new Audio(url);
+      audio.onended = () => URL.revokeObjectURL(url);
+      audioRef.current = audio;
+      await audio.play();
+    } catch (err) {
+      console.warn("Neural voice unavailable, using browser voice:", err);
+      if (token === speechTokenRef.current) browserSpeak(message);
+    }
   }
 
   async function sendToBackend(message) {
@@ -343,7 +384,7 @@ export default function App() {
       return;
     }
 
-    window.speechSynthesis?.cancel();
+    stopSpeaking();
     finalTextRef.current = "";
 
     const recognition = new SpeechRecognition();
@@ -408,7 +449,7 @@ export default function App() {
       recognitionRef.current?.stop();
     } catch {}
 
-    window.speechSynthesis?.cancel();
+    stopSpeaking();
 
     if (!DEMO_MODE) {
       const endpoint = `${API_BASE_URL.replace(/\/$/, "")}/api/reset`;
@@ -622,7 +663,7 @@ export default function App() {
               className="read-toggle"
               onClick={() => {
                 if (voiceEnabled) {
-                  window.speechSynthesis?.cancel();
+                  stopSpeaking();
                 }
 
                 setVoiceEnabled(value => !value);

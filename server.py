@@ -4,10 +4,13 @@ POST /api/search  {"message": "...", "language": "de|en", "session": "<id>"}
   -> {"kind": "ask|recommend|crisis", "reply": "<text to show and read aloud>", "follow_up": "",
       "region": "...", "results": [{"title", "category", "description", "match_reason", "url", "offices": [...]}]}
 POST /api/reset   {"session": "<id>"}
+POST /api/tts     {"text": "...", "language": "de|en"}  -> audio/mpeg (natural Microsoft neural voice via edge-tts)
 """
-import json, os, re
+import asyncio, json, os, re
 from http.server import ThreadingHTTPServer, BaseHTTPRequestHandler
 from pathlib import Path
+
+import edge_tts
 
 from wegweiser.router import Assistant, CARD, find_offices
 from wegweiser import llm
@@ -15,6 +18,10 @@ from wegweiser import llm
 PORT = int(os.environ.get("PORT", 8000))
 SERVICES = {s["service_id"]: s for s in json.load(open(Path(__file__).resolve().parent / "data/processed/services.json", encoding="utf8"))}
 sessions = {}                      # session id -> Assistant (in memory; fine for a prototype)
+# Natural-sounding neural voices; change in .env (TTS_VOICE_DE / TTS_VOICE_EN), list: edge-tts --list-voices
+VOICES = {"de": os.environ.get("TTS_VOICE_DE", "de-DE-SeraphinaMultilingualNeural"),
+          "en": os.environ.get("TTS_VOICE_EN", "en-US-AvaMultilingualNeural")}
+TTS_RATE = os.environ.get("TTS_RATE", "-5%")          # a touch slower than default sounds calmer
 OFFICE_FIELDS = ("organisation", "street", "plz", "city", "region", "phone", "email", "website")
 
 
@@ -67,6 +74,21 @@ def spoken_reply(reply):
     return "\n".join(lines)
 
 
+def speech_text(text):
+    """Text as it should be spoken: no web or e-mail addresses, no bullet symbols."""
+    text = re.sub(r"https?://\S+|www\.\S+|\S+@\S+", "", text)
+    text = text.replace("•", "").replace("·", "").replace("Tel.", "Telefon")
+    return re.sub(r"[ \t]+", " ", text).strip()
+
+
+async def _synthesize(text, voice):
+    audio = bytearray()
+    async for chunk in edge_tts.Communicate(text, voice, rate=TTS_RATE).stream():
+        if chunk["type"] == "audio":
+            audio += chunk["data"]
+    return bytes(audio)
+
+
 class Handler(BaseHTTPRequestHandler):
     def _send(self, code, body):
         data = json.dumps(body, ensure_ascii=False).encode()
@@ -99,6 +121,22 @@ class Handler(BaseHTTPRequestHandler):
         except json.JSONDecodeError:
             return self._send(400, {"error": "invalid JSON"})
         sid = str(req.get("session", ""))[:64] or "default"
+
+        if self.path == "/api/tts":
+            text = speech_text(str(req.get("text", "")))[:1500]
+            if not text:
+                return self._send(400, {"error": "empty text"})
+            try:
+                audio = asyncio.run(_synthesize(text, VOICES.get(req.get("language"), VOICES["de"])))
+            except Exception as e:                   # no internet etc. - the frontend falls back to the browser voice
+                return self._send(502, {"error": f"TTS failed: {e}"})
+            self.send_response(200)
+            self._cors()
+            self.send_header("Content-Type", "audio/mpeg")
+            self.send_header("Content-Length", str(len(audio)))
+            self.end_headers()
+            self.wfile.write(audio)
+            return
 
         if self.path == "/api/reset":
             sessions.pop(sid, None)

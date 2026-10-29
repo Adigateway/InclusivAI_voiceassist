@@ -1,1 +1,2 @@
 openpyxl>=3.1
+edge-tts>=6.1         # natural neural voices for spoken answers (free, needs internet)
