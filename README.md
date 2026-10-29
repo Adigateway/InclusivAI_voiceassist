@@ -50,7 +50,10 @@ Speech → STT → LLM case builder ──missing info?──▶ follow-up quest
 ├── tests/
 │   ├── routing_cases.json             # 20 example situations with the expected service
 │   └── eval_routing.py                # Measures routing accuracy
-├── cli.py                             # Text chat with the assistant
+├── web/
+│   └── index.html                     # Chat page (plain HTML/JS, no build step)
+├── server.py                          # Web server + /api/chat (standard library only)
+├── cli.py                             # Text chat in the terminal
 ├── scripts/
 │   ├── scrape.py                      # caritas-wuerzburg.de → data/raw/
 │   ├── structure.py                   # raw pages → cleaned services, offices, referents
@@ -140,16 +143,32 @@ python scripts/scrape.py           # re-scrape the website (optional, data is co
 python scripts/structure.py        # build data/processed/
 python scripts/export_overview.py  # build data/exports/
 ollama pull qwen2.5:3b             # free local LLM (~1.9 GB)
-python cli.py                      # chat with the assistant
+python server.py                   # web chat at http://localhost:8000
+python cli.py                      # or: chat in the terminal
 python -m tests.eval_routing       # routing accuracy
 ```
+
+## Web API
+
+The page talks to one endpoint, so a voice front end can reuse it:
+
+```http
+POST /api/chat   {"session": "<any id>", "message": "Ich habe Schulden, ich wohne in Lohr"}
+→ {"kind": "ask" | "recommend" | "crisis", "text": "...", "region": "Main-Spessart",
+   "services": [{"id": "schuldnerberatung", "name": "..."}], "offices": [{"organisation": "...", "phone": "...", ...}]}
+
+POST /api/reset  {"session": "<id>"}
+```
+
+`text` is the complete answer, ready to be read aloud by text-to-speech.
 
 ## Roadmap
 
 - [x] Scrape and structure the Caritas service directory
 - [x] LLM routing (service cards + JSON output + validation)
 - [x] Region and service matcher
-- [ ] Voice UI (speech-to-text and text-to-speech, multilingual)
+- [x] Web chat UI
+- [ ] Voice (speech-to-text and text-to-speech, multilingual)
 - [x] Crisis detection and safety layer
 - [ ] Demo personas
 
