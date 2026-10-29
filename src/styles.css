@@ -1,0 +1,691 @@
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #1b3048;
+  background: #fbf6f3;
+  --red: #d92736;
+  --ink: #172c43;
+  --muted: #738195;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at 8% 15%, #fce4e4 0, transparent 36%),
+    radial-gradient(ellipse at 95% 85%, #f9e8df 0, transparent 35%),
+    #fbf8f5;
+}
+
+button, a { font: inherit; }
+button { cursor: pointer; }
+button:disabled { opacity: .55; cursor: not-allowed; }
+
+.app-shell {
+  max-width: 1450px;
+  margin: auto;
+  padding: 24px 34px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 17px 24px;
+  background: #ffffffb8;
+  border: 1px solid #ffffff;
+  border-radius: 22px;
+  box-shadow: 0 8px 32px #28364b0b;
+  backdrop-filter: blur(18px);
+}
+
+
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+  color: inherit;
+  text-decoration: none;
+}
+
+.caritas-emblem {
+  width: 68px;
+  height: 76px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 5px 4px 3px;
+  border-radius: 11px;
+  background: #ed1c2e;
+  box-shadow: 0 2px 5px #d9273620;
+}
+
+.caritas-cross {
+  display: block;
+  width: 53px;
+  height: 53px;
+}
+
+.caritas-label {
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1;
+  letter-spacing: -0.4px;
+}
+
+.brand-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.brand-name {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 36px;
+  font-weight: 750;
+  letter-spacing: -1.5px;
+  line-height: 1.12;
+  white-space: nowrap;
+}
+
+.brand-red {
+  color: #ed1c2e;
+}
+
+.brand-black {
+  color: #172c43;
+}
+
+.brand-tagline {
+  color: #718096;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .brand {
+    gap: 10px;
+  }
+
+  .caritas-emblem {
+    width: 54px;
+    height: 62px;
+  }
+
+  .caritas-cross {
+    width: 42px;
+    height: 42px;
+  }
+
+  .caritas-label {
+    font-size: 10px;
+  }
+
+  .brand-name {
+    font-size: 27px;
+    letter-spacing: -1px;
+  }
+
+  .brand-tagline {
+    font-size: 10px;
+  }
+}
+
+
+.top-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  color: var(--muted);
+}
+
+.top-actions button {
+  border: 0;
+  background: transparent;
+  color: #647489;
+  font-size: 12px;
+}
+
+.top-actions button.selected {
+  color: var(--red);
+  font-weight: 700;
+}
+
+.top-actions .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-left: 10px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  gap: 24px;
+  min-height: 650px;
+  margin-top: 22px;
+}
+
+.hero, .chat-panel {
+  border: 1px solid #ffffff;
+  border-radius: 28px;
+  box-shadow: 0 15px 45px #28364b0c;
+  backdrop-filter: blur(20px);
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 48px;
+  background: #fffaf7d9;
+}
+
+.eyebrow {
+  color: #c65c65;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  max-width: 450px;
+  margin: 17px 0;
+  color: var(--ink);
+  font: 800 clamp(38px, 4vw, 58px)/1.12 "Manrope", sans-serif;
+  letter-spacing: -2.5px;
+}
+
+.intro {
+  max-width: 370px;
+  color: #748195;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.mic-stage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 55px;
+}
+
+.mic-halo {
+  position: absolute;
+  top: -21px;
+  width: 205px;
+  height: 205px;
+  border: 1px solid #f1c5c7;
+  border-radius: 50%;
+  background: #fff0f02e;
+}
+
+.mic-button {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 164px;
+  height: 164px;
+  border: 8px solid #ffffffa6;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #ef4650, #cf1e30);
+  color: white;
+  box-shadow: 0 15px 36px #d9273640;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.mic-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px #d927364f;
+}
+
+.mic-stage.active .mic-button { animation: pulse 1.7s infinite; }
+
+.mic-status {
+  margin: 30px 0 14px;
+  color: #627288;
+  font-size: 13px;
+}
+
+.start-button {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 12px 22px;
+  border: 0;
+  border-radius: 999px;
+  background: #fff0f0;
+  color: #bc2937;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.hero-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 45px;
+  color: #829082;
+  font-size: 11px;
+}
+
+.hero-note svg { color: #389b69; }
+
+.chat-panel {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  background: #ffffffa8;
+}
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 23px;
+  border-bottom: 1px solid #20354b0d;
+}
+
+.chat-avatar, .welcome-avatar {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 43px;
+  height: 43px;
+  border-radius: 15px;
+  background: #fff0ef;
+  color: var(--red);
+}
+
+.chat-header strong { display: block; font-size: 14px; }
+.chat-header small { display: block; margin-top: 4px; color: var(--muted); font-size: 11px; }
+
+.online-dot {
+  margin-left: auto;
+  color: #3d9467;
+  font-size: 10px;
+}
+
+.chat-content {
+  flex: 1;
+  min-height: 340px;
+  max-height: 540px;
+  overflow-y: auto;
+  padding: 27px 22px;
+}
+
+.welcome, .message { display: flex; gap: 10px; margin-bottom: 20px; }
+.welcome-avatar { width: 35px; height: 35px; border-radius: 12px; }
+
+.bubble {
+  max-width: 90%;
+  padding: 16px 18px;
+  border: 1px solid #fff;
+  border-radius: 8px 19px 19px;
+  background: #ffffffdf;
+  box-shadow: 0 5px 20px #28364b08;
+}
+
+.bubble p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.bubble small {
+  display: block;
+  margin-top: 9px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.message.user { justify-content: flex-end; }
+.message.user .bubble {
+  border-radius: 19px 8px 19px 19px;
+  background: #eaf7ed;
+}
+
+.message.assistant .bubble { background: #fff; }
+
+.listen-answer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 10px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--red);
+  font-size: 11px;
+}
+
+.loading { color: var(--muted); font-size: 12px; }
+
+.service-card {
+  margin: 16px 0;
+  overflow: hidden;
+  border: 1px solid #fff;
+  border-radius: 19px;
+  background: #ffffffdf;
+  box-shadow: 0 8px 22px #28364b0a;
+}
+
+.service-main {
+  display: grid;
+  grid-template-columns: 45px minmax(0, 1fr);
+  gap: 12px;
+  padding: 17px;
+}
+
+.service-icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: #fff0ef;
+  color: var(--red);
+}
+
+.service-description small {
+  color: #c65c65;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.service-description h3 {
+  margin: 7px 0;
+  font: 700 16px "Manrope", sans-serif;
+}
+
+.service-description p {
+  color: #6f7e91;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.category {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: #e7f6eb;
+  color: #338258;
+  font-size: 10px;
+}
+
+.reason { display: flex; gap: 6px; }
+
+.details-button {
+  grid-column: 2;
+  justify-self: start;
+  padding: 8px 12px;
+  border: 0;
+  border-radius: 10px;
+  background: #fff0ef;
+  color: var(--red);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.service-details { padding: 0 18px 18px; }
+.office { padding: 12px 0; border-top: 1px solid #eee8e7; }
+
+.office strong, .office a, .official-link {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  overflow-wrap: anywhere;
+  font-size: 12px;
+}
+
+.office p { color: var(--muted); font-size: 11px; }
+.office a, .official-link { margin-top: 9px; color: #176ac0; text-decoration: none; }
+.source-note { display: block; margin-top: 12px; color: #9aa3ad; }
+
+.error {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 0 15px 12px;
+  padding: 12px;
+  border-radius: 12px;
+  background: #fff0f0;
+  color: #a71d2a;
+  font-size: 12px;
+}
+
+.error span { flex: 1; }
+.error button { border: 0; background: transparent; color: inherit; }
+
+.chat-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 16px;
+  border-top: 1px solid #20354b0d;
+}
+
+.read-toggle, .restart-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 0;
+  background: transparent;
+  color: #526479;
+  font-size: 11px;
+}
+
+.restart-button {
+  padding: 11px 14px;
+  border: 1px solid #e7e8ed;
+  border-radius: 999px;
+  background: white;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.page-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 20px 8px;
+  color: #85909d;
+  font-size: 11px;
+}
+
+.page-footer button { border: 0; background: transparent; color: #66778b; }
+
+.modal-backdrop {
+  position: fixed;
+  z-index: 10;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: #19283c66;
+  backdrop-filter: blur(7px);
+}
+
+.privacy-modal {
+  position: relative;
+  width: min(500px, 100%);
+  padding: 32px;
+  border: 1px solid white;
+  border-radius: 24px;
+  background: #fffdfa;
+  box-shadow: 0 22px 70px #18233033;
+}
+
+
+.privacy-modal h2 {
+  color: #172c43;
+  font-family: "Manrope", sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.3;
+  margin: 18px 0;
+}
+
+
+.privacy-modal p {
+  color: #66768a;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #e5e7eb;
+  border-radius: 50%;
+  background: #f3f4f6;
+  color: #172c43;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.modal-close:hover {
+  background: #e5e7eb;
+}
+
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 15px 36px #d9273640; }
+  50% { box-shadow: 0 15px 36px #d9273640, 0 0 0 14px #d9273614; }
+}
+
+@media (max-width: 850px) {
+  .app-shell { padding: 12px; }
+  .topbar { align-items: flex-start; flex-direction: column; }
+  .top-actions { gap: 8px; }
+  .layout { grid-template-columns: 1fr; }
+  .hero { padding: 35px 23px; }
+  .hero h1 { font-size: 42px; }
+  .mic-stage { margin-top: 38px; }
+  .chat-content { max-height: 65vh; }
+}
+
+@media (max-width: 480px) {
+  .brand strong { font-size: 24px; }
+  .top-actions .nav-link { margin-left: 0; }
+  .hero h1 { font-size: 36px; }
+  .chat-header { padding: 16px; }
+  .chat-content { padding: 18px 12px; }
+  .page-footer { flex-wrap: wrap; justify-content: center; text-align: center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+/* Caritas Wegweiser header */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+  text-decoration: none;
+  color: #102b49;
+}
+
+.caritas-emblem {
+  width: 72px;
+  height: 86px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 4px;
+  border-radius: 10px;
+  background: #ed101c;
+}
+
+.caritas-emblem svg {
+  width: 52px;
+  height: 52px;
+}
+
+.caritas-label {
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1;
+}
+
+.brand-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.brand-name {
+  color: #102b49;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 29px;
+  font-weight: 750;
+  letter-spacing: -0.7px;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.brand-tagline {
+  color: #61758e;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+@media (max-width: 600px) {
+  .brand { gap: 10px; }
+
+  .caritas-emblem {
+    width: 52px;
+    height: 64px;
+  }
+
+  .caritas-emblem svg {
+    width: 38px;
+    height: 38px;
+  }
+
+  .caritas-label { font-size: 10px; }
+  .brand-name { font-size: 21px; }
+  .brand-tagline { font-size: 11px; }
+}
+
+.brand-red {
+  color: #ed1c2e;
+}
+
+.brand-black {
+  color: #000000;
+}
