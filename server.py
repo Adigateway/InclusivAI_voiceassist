@@ -49,7 +49,22 @@ def spoken_reply(reply):
     """The reply without the office list; the offices are shown as cards, so they aren't read out line by line."""
     if reply.kind != "recommend":
         return reply.text
-    return "\n".join(l for l in reply.text.split("\n") if not l.startswith(("•", "  ")))
+    label = {"de": "Anlaufstelle:", "en": "Where to go:"}.get(reply.lang, "→")
+    lines, offices, named = [], iter(reply.offices), False
+    for line in reply.text.split("\n"):
+        if line.startswith("•"):                    # office bullet: name the first office per service, briefly
+            office = next(offices, None)
+            if office and not named:
+                where = f"{office['organisation']}, {office['city']}."
+                if lines and lines[-1].endswith(":"):
+                    lines[-1] += " " + where
+                else:
+                    lines.append(f"{label} {where}")
+                named = True
+        elif not line.startswith("  "):
+            named = named and not line.startswith(("Ich empfehle", "I recommend"))
+            lines.append(line)
+    return "\n".join(lines)
 
 
 class Handler(BaseHTTPRequestHandler):

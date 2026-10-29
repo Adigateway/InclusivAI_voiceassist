@@ -114,6 +114,7 @@ Fields in `offices.json`:
 1. **Crisis check** (`wegweiser/safety.py`): keyword rules in several languages run on every message *before* the LLM. On a match, the assistant gives the emergency numbers straight away.
 2. **The LLM picks the service type, or asks a question.** It only asks when it can't decide, using the questions in `data/routing/clarifying_questions.json`, and asks at most 2 per conversation (see `docs/clarifying_questions.txt`).
    Every request includes all service cards from `data/routing/service_cards.json` in the prompt. The model answers in JSON with `action` (`ask`/`recommend`), `service_ids`, `question`, `reason` and `language`. Nothing is trained or fine-tuned.
+   If the person asks something *about* a suggested service ("Do they judge me?", "Is it free?", "Kostet das etwas?"), the model answers briefly instead (action `answer`), using only general facts about Caritas counselling. It never invents contact details or opening hours.
 3. **Code validates the answer.** Any service id that isn't in the catalogue is dropped. If nothing valid remains, the assistant falls back to general social counselling (Allgemeine Sozialberatung).
 4. **Code finds the region** from the town the user names (for example "Lohr" → Main-Spessart). If no town is known, it asks once.
 5. **Code looks up the offices** in `offices.json`, in this order: an office in the user's region → a related service in the region → the central office serving all of Lower Franconia → local general social counselling. The LLM never produces contact details.

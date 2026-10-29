@@ -40,16 +40,23 @@ SERVICES:
 
 RULES:
 - Answer with ONLY a JSON object, no other text:
-  {{"action": "ask" or "recommend", "service_ids": ["<service id from the list>"], "question": "...", "reason": "...", "language": "<ISO code>"}}
+  {{"action": "ask" or "recommend" or "answer", "service_ids": ["<service id from the list>"], "question": "...", "reason": "...", "answer": "...", "language": "<ISO code>"}}
 - If the situation is clear, use action "recommend" with 1 service (2 only if there are clearly two separate problems).
 - Only ask a question when you really cannot choose: the problem is unclear, or two services fit equally well.
   Ask ONE short, kind question. Never ask about something the person already told you.
   Prefer these questions (translate them into the person's language):
 {questions}
+- Use action "answer" when the person asks a question ABOUT a service you already suggested or about how
+  counselling works (e.g. "Do they judge me?", "Is it free?", "Do I need an appointment?", "Can I stay anonymous?",
+  "Can my partner come too?"). Put a warm, honest reply of 1-3 short sentences in `answer`. You may say what is true
+  for Caritas counselling in general: it is free, confidential, the counsellors are bound to secrecy, they do not judge,
+  you do not need to be religious, you can usually stay anonymous, relatives are welcome. NEVER invent phone numbers,
+  addresses, opening hours, waiting times or names - say the office can tell them on the phone.
+  If the person describes a NEW problem instead, use "recommend" or "ask" again.
 - Never ask for the town or postcode; the system does that itself. Never ask for names or other personal details.
 - If the person earlier said something that sounded like a crisis, take that into account (e.g. krisenhilfe-telefonseelsorge
   or sozialpsychiatrische-dienste) and answer their follow-up question kindly.
-- Write `question` and `reason` in the same language the person uses. Keep them short and simple.
+- Write `question`, `reason` and `answer` in the same language the person uses. Keep them short and simple.
 - `reason` explains in one sentence why this service fits what the person said.
 - Pick the service that matches the CORE problem, not side details (drinking -> addiction, not money).
 - For children and teenagers under 18 with drugs or alcohol, use "jugend-suchtberatung".
@@ -69,7 +76,7 @@ def _services_prompt():
 
 @dataclass
 class Reply:
-    kind: str                     # "crisis" | "ask" | "recommend"
+    kind: str                     # "crisis" | "ask" | "recommend" | "answer"
     text: str
     service_ids: list = field(default_factory=list)
     offices: list = field(default_factory=list)
@@ -80,6 +87,9 @@ class Reply:
 
 EN_WORDS = re.compile(r"\b(i|my|me|the|and|is|need|help|can't|don't|have|live|what|please)\b", re.I)
 DE_WORDS = re.compile(r"\b(ich|mein|meine|und|nicht|ist|habe|wohne|bitte|kann|keine|der|die|das)\b", re.I)
+
+
+LANGUAGE_NAMES = {"de": "German", "en": "English", "uk": "Ukrainian", "ru": "Russian", "tr": "Turkish", "ar": "Arabic"}
 
 
 def guess_language(text, llm_guess):
@@ -201,11 +211,17 @@ class Assistant:
         self.messages.append({"role": "user", "content": user_text})
         enough = self.questions_asked >= MAX_QUESTIONS
         extra = [{"role": "system", "content": "You have asked enough questions. Recommend the best fitting service now."}] if enough else []
+        # The German service data pulls the model towards German, so state the reply language every turn
+        reply_lang = lang or guess_language(user_text, self.lang)
+        extra.append({"role": "system", "content": f"Write question, reason and answer in this language: {LANGUAGE_NAMES.get(reply_lang, reply_lang)}."})
         decision = llm.json_reply(llm.chat(self.messages + extra, json_mode=True)) or {}
         self.lang = lang or guess_language(user_text, decision.get("language"))
         t = texts(self.lang)
 
         ids = [i for i in decision.get("service_ids") or [] if i in CARD][:2]   # never trust the model blindly
+        if decision.get("action") == "answer" and decision.get("answer"):      # question about a suggested service
+            self.messages.append({"role": "assistant", "content": decision["answer"]})
+            return Reply("answer", decision["answer"], lang=self.lang)
         wants_to_ask = decision.get("action") == "ask" and decision.get("question") and not enough
         if wants_to_ask:
             self.questions_asked += 1
