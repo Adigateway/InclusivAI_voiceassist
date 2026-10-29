@@ -47,7 +47,8 @@ Download the local voices once (about 125 MB, gitignored):
 .
 ├── data/
 │   ├── raw/
-│   │   └── services_raw.json          # Scraped "Hilfe & Beratung" pages (49 pages)
+│   │   ├── services_raw.json          # Scraped "Hilfe & Beratung" pages (49 pages)
+│   │   └── CARITAS_DATASET.xlsx       # Caritas question/intent dataset (source of the follow-up questions)
 │   ├── processed/                     # Clean data used by the assistant
 │   │   ├── services.json              # 33 routable services (what the LLM chooses from)
 │   │   ├── offices.json / .csv        # 115 local offices (what the code looks up by region)
@@ -67,7 +68,9 @@ Download the local voices once (about 125 MB, gitignored):
 │   ├── routing_cases.json             # 20 example situations with the expected service
 │   └── eval_routing.py                # Measures routing accuracy
 ├── docs/
-│   └── clarifying_questions.txt       # The questions + example conversations, for the presentation
+│   ├── clarifying_questions.txt       # The questions + example conversations, for the presentation
+│   ├── test_questions.txt             # German and English test questions with expected services
+│   └── CaritAssist - 5-Minute Pitch Deck.pptx   # Final pitch (10 slides, speaker notes)
 ├── frontend/                          # CaritAssist web app (React + Vite): browser speech in/out
 ├── server.py                          # API for the frontend: /api/search (standard library only)
 ├── cli.py                             # Text chat in the terminal
