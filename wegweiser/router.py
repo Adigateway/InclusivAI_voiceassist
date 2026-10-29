@@ -15,6 +15,8 @@ ROOT = Path(__file__).resolve().parent.parent
 CARDS = json.load(open(ROOT / "data/routing/service_cards.json", encoding="utf8"))
 OFFICES = json.load(open(ROOT / "data/processed/offices.json", encoding="utf8"))
 CARD = {c["id"]: c for c in CARDS}
+QUESTIONS = json.load(open(ROOT / "data/routing/clarifying_questions.json", encoding="utf8"))
+MAX_QUESTIONS = 2                 # clarifying questions per conversation (the town question is extra)
 FALLBACK = "allgemeine-sozialberatung"
 
 REGIONS = sorted({o["region"] for o in OFFICES})
@@ -40,17 +42,28 @@ RULES:
 - Answer with ONLY a JSON object, no other text:
   {{"action": "ask" or "recommend", "service_ids": ["<service id from the list>"], "question": "...", "reason": "...", "language": "<ISO code>"}}
 - If the situation is clear, use action "recommend" with 1 service (2 only if there are clearly two separate problems).
-- If it is unclear what the problem is, use action "ask" and ask ONE short, kind question in plain language.
-- Do not ask for the town if you already know it. Do not ask for personal details like names.
+- Only ask a question when you really cannot choose: the problem is unclear, or two services fit equally well.
+  Ask ONE short, kind question. Never ask about something the person already told you.
+  Prefer these questions (translate them into the person's language):
+{questions}
+- Never ask for the town or postcode; the system does that itself. Never ask for names or other personal details.
+- If the person earlier said something that sounded like a crisis, take that into account (e.g. krisenhilfe-telefonseelsorge
+  or sozialpsychiatrische-dienste) and answer their follow-up question kindly.
 - Write `question` and `reason` in the same language the person uses. Keep them short and simple.
 - `reason` explains in one sentence why this service fits what the person said.
 - Pick the service that matches the CORE problem, not side details (drinking -> addiction, not money).
 - For children and teenagers under 18 with drugs or alcohol, use "jugend-suchtberatung".
-- If nothing fits well, choose "allgemeine-sozialberatung" (general social counselling)."""
+- Always prefer a SPECIFIC service when one matches (prison release -> straffaelligenhilfe, rejected asylum and
+  thinking of going home -> rueckkehrberatung, nowhere to sleep -> wohnsitzlosigkeit).
+  Use "allgemeine-sozialberatung" only when no specific service matches."""
+
+
+def _questions_prompt():
+    return "\n".join(f'  * {q["id"]} – when: {q["when"]} → "{q["en"]}"' for q in QUESTIONS if q["id"] != "Q001")
 
 
 def _services_prompt():
-    return "\n".join(f'- {c["id"]} ({c["name"]}): {c["helps_with"]} People say: ' + "; ".join(f'"{x}"' for x in c["says"])
+    return "\n".join(f'- {c["id"]} ({c["name"]}): {c["helps_with"]} People say: ' + "; ".join(f'"{x}"' for x in c["says"][:2])
                      for c in CARDS)
 
 
@@ -80,6 +93,17 @@ def find_region(text):
         if re.search(rf"\b{re.escape(town)}\b", text, re.I):
             return region
     return ""
+
+
+def region_from_llm(text):
+    """For towns the list doesn't know: villages, other spellings, other alphabets ("Швайнфурт")."""
+    try:
+        out = llm.json_reply(llm.chat([{"role": "user", "content":
+            f"Which of these districts in Lower Franconia is the place mentioned in the text in? Districts: {REGIONS}. "
+            f'Text: "{text}". Reply with JSON {{"region": "<exact district from the list or unknown>"}}'}], json_mode=True))
+        return out.get("region") if out and out.get("region") in REGIONS else ""
+    except Exception:
+        return ""
 
 
 def lookup(service_id, region):
@@ -123,6 +147,26 @@ TEXT = {
 }
 
 
+def texts(lang):
+    """Fixed reply phrases in the user's language. German and English are written by hand; other languages are
+    translated once by the LLM and cached (contact details are never translated, only these phrases)."""
+    if lang not in TEXT:
+        try:
+            src = dict(TEXT["en"], emergency=EMERGENCY["en"])
+            out = llm.json_reply(llm.chat([{"role": "user", "content":
+                f"Translate the values of this JSON into the language with ISO code '{lang}'. Keep the keys and the "
+                f"{{placeholders}} and phone numbers unchanged. Reply with JSON only.\n{json.dumps(src)}"}], json_mode=True))
+            TEXT[lang] = {k: out.get(k, v) for k, v in src.items()} if out else TEXT["en"]
+        except Exception:
+            return TEXT["en"]
+    return TEXT[lang]
+
+
+def needs_region(service_ids):
+    """False when every chosen service has only one central office for all of Unterfranken."""
+    return any(len({o["region"] for o in OFFICES if o["service_id"] in CARD[s]["office_ids"]}) > 1 for s in service_ids)
+
+
 def format_office(o):
     addr = f"{o['street']}, {o['plz']} {o['city']}" if not o["street"].startswith("siehe") else o["city"]
     return f"• {o['organisation']}\n  {addr}\n  Tel. {o['phone']} · {o['email']}\n  {o['website']}"
@@ -130,43 +174,53 @@ def format_office(o):
 
 class Assistant:
     def __init__(self):
-        self.messages = [{"role": "system", "content": SYSTEM.format(services=_services_prompt())}]
+        self.messages = [{"role": "system", "content": SYSTEM.format(services=_services_prompt(), questions=_questions_prompt())}]
         self.region = ""
         self.pending = None           # decision waiting for the region
         self.lang = "de"
+        self.questions_asked = 0
 
-    def handle(self, user_text):
+    def handle(self, user_text, lang=None):
+        """lang: language detected from speech (e.g. Whisper); more reliable than guessing from the text."""
         self.region = find_region(user_text) or self.region
         if is_crisis(user_text):
-            self.lang = guess_language(user_text, self.lang)
-            return Reply("crisis", EMERGENCY.get(self.lang if self.lang in EMERGENCY else "en"))
+            self.lang = lang or guess_language(user_text, self.lang)
+            text = EMERGENCY.get(self.lang) or texts(self.lang).get("emergency") or EMERGENCY["en"]
+            # keep the crisis in the conversation, so a follow-up like "what help do I need?" is understood
+            self.messages += [{"role": "user", "content": user_text}, {"role": "assistant", "content": text}]
+            return Reply("crisis", text)
 
+        if self.pending and not self.region:       # we asked for the town; the list didn't recognise the answer
+            self.region = region_from_llm(user_text)
         if self.pending and self.region:          # user just told us where they live
             decision, self.pending = self.pending, None
             return self._recommend(decision)
 
         self.messages.append({"role": "user", "content": user_text})
-        decision = llm.json_reply(llm.chat(self.messages, json_mode=True)) or {}
-        self.lang = guess_language(user_text, decision.get("language"))
-        t = TEXT.get(self.lang, TEXT["en"])
+        enough = self.questions_asked >= MAX_QUESTIONS
+        extra = [{"role": "system", "content": "You have asked enough questions. Recommend the best fitting service now."}] if enough else []
+        decision = llm.json_reply(llm.chat(self.messages + extra, json_mode=True)) or {}
+        self.lang = lang or guess_language(user_text, decision.get("language"))
+        t = texts(self.lang)
 
         ids = [i for i in decision.get("service_ids") or [] if i in CARD][:2]   # never trust the model blindly
-        if decision.get("action") == "recommend" and not ids:
-            ids = [FALLBACK]
+        wants_to_ask = decision.get("action") == "ask" and decision.get("question") and not enough
+        if wants_to_ask:
+            self.questions_asked += 1
+            self.messages.append({"role": "assistant", "content": decision["question"]})
+            return Reply("ask", decision["question"])
         if not ids:
-            q = decision.get("question") or t["region_q"]
-            self.messages.append({"role": "assistant", "content": q})
-            return Reply("ask", q)
+            ids = [FALLBACK]
 
         decision["service_ids"] = ids
-        if not self.region:
+        if not self.region and needs_region(ids):
             self.pending = decision
             self.messages.append({"role": "assistant", "content": t["region_q"]})
             return Reply("ask", t["region_q"], service_ids=ids)
         return self._recommend(decision)
 
     def _recommend(self, decision):
-        t = TEXT.get(self.lang, TEXT["en"])
+        t = texts(self.lang)
         parts, all_offices = [], []
         for sid in decision["service_ids"]:
             offices, how = find_offices(sid, self.region)

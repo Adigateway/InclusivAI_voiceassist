@@ -26,6 +26,10 @@ Speech → STT → LLM case builder ──missing info?──▶ follow-up quest
               Service matcher (region × service type) → explanation → TTS + contact card
 ```
 
+## Languages
+
+Whisper's language detection is limited to German, English, Ukrainian, Russian, Turkish and Arabic, and biased towards German. Short German sentences were sometimes detected as English, and Whisper then translated them instead of transcribing. The detected language goes to the router and to the voice, so the answer comes back in the language the person spoke. There's also a manual language selector in the voice app.
+
 ## Repository structure
 
 ```
@@ -42,7 +46,8 @@ Speech → STT → LLM case builder ──missing info?──▶ follow-up quest
 │       ├── services_overview.xlsx     # Readable dump of raw pages + all contact links
 │       └── services_pages.csv
 ├── data/routing/
-│   └── service_cards.json             # Plain-language service cards the LLM routes with (32 cards)
+│   ├── service_cards.json             # Plain-language service cards the LLM routes with (32 cards)
+│   └── clarifying_questions.json      # Follow-up questions (DE/EN), asked only when needed
 ├── wegweiser/                         # Routing engine (Python package)
 │   ├── llm.py                         # Client for any OpenAI-compatible API (Ollama, Groq, ...)
 │   ├── router.py                      # Routing engine: LLM picks service, code picks office
@@ -53,6 +58,8 @@ Speech → STT → LLM case builder ──missing info?──▶ follow-up quest
 ├── web/
 │   └── index.html                     # Chat page (plain HTML/JS, no build step)
 ├── app.py                             # Voice app (Streamlit): mic → Whisper → routing → edge-tts
+├── docs/
+│   └── clarifying_questions.txt       # The questions + example conversations, for the presentation
 ├── server.py                          # Web server + /api/chat (standard library only)
 ├── cli.py                             # Text chat in the terminal
 ├── scripts/
@@ -107,7 +114,8 @@ Fields in `offices.json`:
 ## How routing works
 
 1. **Crisis check** (`wegweiser/safety.py`): keyword rules in several languages run on every message *before* the LLM. On a match, the assistant gives the emergency numbers straight away.
-2. **The LLM picks the service type.** Every request includes all service cards from `data/routing/service_cards.json` in the prompt. The model answers in JSON with `action` (`ask`/`recommend`), `service_ids`, `question`, `reason` and `language`. Nothing is trained or fine-tuned.
+2. **The LLM picks the service type, or asks a question.** It only asks when it can't decide, using the questions in `data/routing/clarifying_questions.json`, and asks at most 2 per conversation (see `docs/clarifying_questions.txt`).
+   Every request includes all service cards from `data/routing/service_cards.json` in the prompt. The model answers in JSON with `action` (`ask`/`recommend`), `service_ids`, `question`, `reason` and `language`. Nothing is trained or fine-tuned.
 3. **Code validates the answer.** Any service id that isn't in the catalogue is dropped. If nothing valid remains, the assistant falls back to general social counselling (Allgemeine Sozialberatung).
 4. **Code finds the region** from the town the user names (for example "Lohr" → Main-Spessart). If no town is known, it asks once.
 5. **Code looks up the offices** in `offices.json`, in this order: an office in the user's region → a related service in the region → the central office serving all of Lower Franconia → local general social counselling. The LLM never produces contact details.
@@ -121,6 +129,8 @@ export LLM_BASE_URL=https://api.groq.com/openai/v1 LLM_MODEL=openai/gpt-oss-120b
 ```
 
 Put these settings in a `.env` file (copy `.env.example`). It's gitignored, so keys never get committed.
+
+**Backups:** if the main key runs out of tokens or fails, the client automatically tries `LLM_BACKUP_*` (for example a second free Groq key), and then `LLM_LOCAL_FALLBACK` (a local Ollama model). Short rate-limit pauses of 20 s or less are waited out first.
 
 **Accuracy** (`python -m tests.eval_routing`, 20 cases, M1 with 8 GB RAM):
 
