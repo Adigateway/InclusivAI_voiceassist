@@ -1,2 +1,3 @@
 openpyxl>=3.1
-edge-tts>=6.1         # natural neural voices for spoken answers (free, needs internet)
+edge-tts>=6.1         # natural online voice (Seraphina/Ava), free, needs internet
+piper-tts>=1.3       # instant local fallback voice (Kerstin/Jenny), offline

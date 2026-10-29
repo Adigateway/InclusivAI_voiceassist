@@ -241,7 +241,11 @@ export default function App() {
   // Stops whatever is being said right now, including an answer that is still loading
   function stopSpeaking() {
     speechTokenRef.current += 1;
-    audioRef.current?.pause();
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.removeAttribute("src");   // also stops a stream that is still downloading
+      audioRef.current.load();
+    }
     audioRef.current = null;
     window.speechSynthesis?.cancel();
   }
@@ -254,8 +258,9 @@ export default function App() {
     window.speechSynthesis.speak(utterance);
   }
 
-  // Natural neural voice from the backend (/api/tts); the browser voice is only a fallback
-  async function speak(message) {
+  // Natural neural voice from the backend; the browser voice is only a fallback.
+  // ttsUrl: audio the backend already started generating with the answer, streamed so it starts at once.
+  async function speak(message, ttsUrl) {
     if (!voiceEnabled || !message) return;
 
     stopSpeaking();
@@ -264,6 +269,18 @@ export default function App() {
     if (DEMO_MODE) {
       browserSpeak(message);
       return;
+    }
+
+    if (ttsUrl) {
+      const audio = new Audio(`${API_BASE_URL.replace(/\/$/, "")}${ttsUrl}`);
+      audioRef.current = audio;
+      try {
+        await audio.play();
+        return;
+      } catch (err) {
+        if (token !== speechTokenRef.current || err.name === "AbortError") return;
+        console.warn("Streamed voice failed, retrying:", err);
+      }
     }
 
     try {
@@ -353,7 +370,7 @@ export default function App() {
         }
       ]);
 
-      speak(reply);
+      speak(reply, data.tts_url);
     } catch (err) {
       console.error("CaritAssist backend error:", err);
       setError(t.error);

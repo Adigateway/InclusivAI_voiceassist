@@ -28,7 +28,18 @@ Speech → STT → LLM case builder ──missing info?──▶ follow-up quest
 
 ## Languages
 
-Speech recognition runs in the browser (Web Speech API, best in Chrome), in the language picked in the header (`de-DE` or `en-GB`). Answers are read aloud with natural Microsoft neural voices (`/api/tts` via `edge-tts`, free, needs internet): Seraphina for German and Ava for English by default, changeable with `TTS_VOICE_DE` / `TTS_VOICE_EN` in `.env`. If the voice service can't be reached, the browser's own voice is used. Pressing the microphone always stops the current answer. That language goes to the backend, so the reply comes back in German or English. The router can also answer in other languages (Ukrainian, Turkish, Arabic, ...) for typed text.
+Speech recognition runs in the browser (Web Speech API, best in Chrome), in the language picked in the header (`de-DE` or `en-GB`). Answers are read aloud as fast as possible:
+
+- **Seraphina (DE) / Ava (EN):** natural Microsoft neural voices via `edge-tts`. They're free, need internet and sound the most human.
+- **Kerstin (DE) / Jenny (EN):** local Piper voices in `voices/`. They're instant (~0.3 s) and work offline.
+
+The server starts generating the voice the moment the answer is ready, while the text is still on its way to the browser, and streams it. If Seraphina hasn't started speaking within 1.5 s (`TTS_DEADLINE`) or the service fails, Kerstin speaks instead, and the local voice is used directly for the next 60 s. Pressing the microphone always stops the current answer.
+
+Download the local voices once (about 125 MB, gitignored):
+
+```bash
+.venv/bin/python -m piper.download_voices --download-dir voices de_DE-kerstin-low en_GB-jenny_dioco-medium
+``` That language goes to the backend, so the reply comes back in German or English. The router can also answer in other languages (Ukrainian, Turkish, Arabic, ...) for typed text.
 
 ## Repository structure
 
@@ -171,7 +182,8 @@ POST /api/search  {"message": "Ich habe Schulden, ich wohne in Lohr", "language"
    "results": [{"title", "category", "description", "match_reason", "url", "offices": [...]}]}
 
 POST /api/reset   {"session": "<id>"}      # "Neues Anliegen"
-POST /api/tts     {"text": "...", "language": "de"}  → audio/mpeg (neural voice)
+GET  /api/tts/<id>                         # the answer's voice ("tts_url" in /api/search), streamed
+POST /api/tts     {"text": "...", "language": "de"}  → audio (for "Listen" on older messages)
 GET  /api/health                           # model and active LLM providers
 ```
 
